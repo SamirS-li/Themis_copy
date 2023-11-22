@@ -26,7 +26,7 @@ a{
     color: var(--white);
 
 }
-.Main{
+.container{
     width: 990px;
     margin: 0 auto;
 }
@@ -104,3 +104,34 @@ a{
 }
 
 /* ------- Header end -------- */
+
+/* -------- Footer Bottom start */
+
+#footer-bottom{
+    background-color:#241F1D;
+    position:fixed;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    font-family: 'Voces', cursive;
+    line-height: 19.5px;
+    padding: 15px 0 15px 0;
+    border-top: 1px solid #3a322f;
+    outline: 1px solid #241F1D;
+}
+
+.footer-bottom-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright a,.footer-bottom-menu{
+    text-transform: capitalize;
+}
+
+.footer-bottom-main ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+/* -------- Footer Bottom end */
