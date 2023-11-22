@@ -2,13 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+    --white:#fff;
+    --primarty:#f66e00;
+    --secondary:#CBBAAF;
 }
+
 
 body{
     background: #483F3B url(./image/page_background.png) repeat-x;
+    font-family: 'Noticia Text', serif;
+    color: var(--white);
 }
 *{
     padding: 0;
@@ -19,9 +23,84 @@ ul{
 }
 a{
     text-decoration: none;
+    color: var(--white);
+
 }
 .Main{
     width: 990px;
     margin: 0 auto;
-    background-color: red;
 }
+
+/* ------- Header start -------- */
+#Header{
+    padding: 10px 0;
+    border-bottom:5px solid #5d514b;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 15px;
+}
+
+.header-logo,.header-quote{
+    display: inline-block;
+}
+.header-logo img{
+    margin: 10px 0 -7px ;
+}
+.header-logo a{
+    float: right;
+    padding: 7px 30px 7px 20px;
+    border-right: 1px solid #5d514b;
+}
+
+.header-title{
+    font-size: 30px;
+}
+
+.header-title, .header-subtitle{
+    font-weight: 400;
+    line-height: 1;
+    font-family: 'Noticia Text', serif;
+    text-transform: capitalize;
+    display: block;
+}
+
+.header-subtitle{
+    color: var(--secondary);
+    font-size: 18px;
+    text-align: left;
+}
+
+.header-quote{
+    padding: 0 0 0 30px;
+}
+.header-quote h5{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+}
+.header-quote h5 span{
+    color: var(--secondary);
+    line-height: 1.5;
+}
+
+.header-phone{
+    background-image: url(./image/icon_contact.png);
+    background-repeat: no-repeat;
+    padding: 0 0 0 60px;
+}
+.header-phone h5{
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    text-align: left;
+}
+.header-phone h5 span{
+    color: var(--secondary);
+    line-height: 1.5;
+}
+
+/* ------- Header end -------- */
