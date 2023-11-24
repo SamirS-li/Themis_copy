@@ -17,6 +17,7 @@ body{
 *{
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 ul{
     list-style: none;
@@ -104,6 +105,53 @@ a{
 }
 
 /* ------- Header end -------- */
+
+/* ------ Footer start -------- */
+.footer-container > div{
+    max-width: 380px;
+    margin-right: 18px;
+}
+.footer-container > div:last-child{
+    margin-right: 0px;
+}
+
+.footer-title{
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 35px;
+    text-align: left;
+    padding-left:24px;
+}
+.footer-legal .footer-title{
+    background: url(./image/legal-icon.png);
+    background-repeat: no-repeat;
+    background-position: left 5px;
+}
+.legal-list li{
+    padding: 5px 0 5px 21px;
+    border-bottom: solid 1px #5D514B;
+    background: url(./image/bullet_small.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    width: 130px;
+    display: inline-block;
+    margin-right: 17px;
+}
+.legal-list li:nth-child(2n){
+    margin-right: 0;
+}
+
+.legal-list li a{
+    font-size: 13px;
+    font-family: 'Voces', cursive;
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+.legal-list li a:hover{
+    text-decoration: underline;
+}
+/* ------ Footer end ------ */
 
 /* -------- Footer Bottom start */
 
