@@ -106,10 +106,30 @@ a{
 
 /* ------- Header end -------- */
 
+
+
+/* ------- Main start --------- */
+#main{
+    margin-bottom: 30px;
+}
+
+
+/* ------- Main end ----------- */
+
+
+
 /* ------ Footer start -------- */
+#footer{
+    margin-bottom: 50px;
+}
+.footer-container{
+    display: flex;
+}
+
 .footer-container > div{
     max-width: 380px;
     margin-right: 18px;
+    width: 32%;
 }
 .footer-container > div:last-child{
     margin-right: 0px;
@@ -122,11 +142,84 @@ a{
     margin-bottom: 35px;
     text-align: left;
     padding-left:24px;
+    background-repeat: no-repeat !important;
+    background-position: left 5px !important;
 }
+
+.footer-container .carousel-next,.footer-container .carousel-prev{
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+}
+.footer-container a:hover{
+    background-position: 0 -15px;
+}
+.footer-container .carousel-prev{
+    background: url(./image/icon_navbar_up.png);
+    top: 0;
+    right: 20px;
+}
+.footer-container .carousel-next{
+    background: url(./image/icon_navbar_down.png);
+    top: 0;
+    right: 0;
+}
+/* ------------- */
+.footer-news,.footer-testimonials{
+    position: relative;
+}
+.footer-news .footer-title{
+    background-image: url(./image/icon_chat.png);
+}
+.footer-news-main,.footer-testimonials-main{
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-list li, .testimonials-list li{
+    display: flex;
+    margin-bottom: 34px;
+}
+.news-list-date{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-right: 18px;
+    border-right: 1px solid #5D514B;
+}
+.news-list-content,.testimonials-list-content{
+    margin-left: 15px;
+}
+.news-list-content >h6 , .testimonials-list-content >h6{
+    font-size: 16px;
+    font-weight: 400;
+}
+.news-list-content>p ,.testimonials-list-content>p{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Voces', cursive;
+    color: var(--secondary);
+    margin-top: 10px;
+}
+
+/* -------------- */
+.footer-testimonials .footer-title{
+    background-image: url(./image/icon_notes.png);
+}
+.testimonials-list li{
+    background: url(./image/icon_quote.png);
+    background-repeat: no-repeat;
+}
+.testimonials-list-content{
+    margin-left: 37px;
+}
+
+/* -------------- */
 .footer-legal .footer-title{
     background: url(./image/legal-icon.png);
-    background-repeat: no-repeat;
-    background-position: left 5px;
 }
 .legal-list li{
     padding: 5px 0 5px 21px;
@@ -134,9 +227,9 @@ a{
     background: url(./image/bullet_small.png);
     background-repeat: no-repeat;
     background-position: center left;
-    width: 130px;
+    width: 41%;
     display: inline-block;
-    margin-right: 17px;
+    margin-right: 15px;
 }
 .legal-list li:nth-child(2n){
     margin-right: 0;
