@@ -5,6 +5,7 @@ import MainMenu from './MainMenu';
 
 export default function Main(){
     return(
+
         <div id="Main">
             <MainMenu/>
             {/* <MenuContent/> */}

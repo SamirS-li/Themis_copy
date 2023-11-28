@@ -114,6 +114,7 @@ a{
     margin-bottom: 30px;
 }
 
+
 /* --------- Main Menu start ------ */
 #MainMenu{
     width: 100%;
@@ -298,6 +299,7 @@ a{
 /* --------- Main Menu end ------ */
 
 
+
 /* ------- Main end ----------- */
 
 
@@ -338,13 +340,19 @@ a{
 }
 
 .footer-container a:hover{
+    background-position: 0 -15px;
+
+
+.footer-container a:hover{
     background-position: 0 -15px!important;
+
 }
 .footer-container .carousel-prev{
     background: url(./image/icon_navbar_up.png);
     top: 0;
     right: 20px;
 }
+
 
 /* === React Slick carousel */
 .slick-prev, .slick-next{
@@ -417,9 +425,11 @@ a{
     height: 200px;
     overflow: hidden;
 }
+
 .news-list{
     position: relative;
 }
+
 
 .news-list li, .testimonials-list li{
     display: flex;
@@ -452,10 +462,12 @@ a{
 /* -------------- */
 .footer-testimonials .footer-title{
     background-image: url(./image/icon_notes.png);
+
     margin-bottom: -25px;
 }
 .footer-testimonials-main{
     padding-top: 66px;
+
 }
 .testimonials-list li{
     background: url(./image/icon_quote.png);
@@ -464,9 +476,11 @@ a{
 .testimonials-list-content{
     margin-left: 37px;
 }
+
 .footer-testimonials-main .carousel-next,.footer-testimonials-main .carousel-prev{
     display: none;
 }
+
 
 /* -------------- */
 .footer-legal .footer-title{
