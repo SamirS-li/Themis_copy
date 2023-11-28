@@ -1,11 +1,13 @@
 import React from "react";
-import Menus from "./Menus";
+import MainMenu from './MainMenu';
+// import MenuContent from "./MenuContent";
+
 
 export default function Main(){
     return(
-        <div id="main">
-            <h2>This is Main component</h2>
-            {/* <Menus/> */}
+        <div id="Main">
+            <MainMenu/>
+            {/* <MenuContent/> */}
         </div>
     )
 }
