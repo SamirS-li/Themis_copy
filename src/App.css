@@ -7,11 +7,12 @@
     --primarty:#f66e00;
     --secondary:#CBBAAF;
     --secondaryDark:#5d514b;
+    --background:#483f3b;
 }
 
 
 body{
-    background: #483F3B url(./image/page_background.png) repeat-x;
+    background: var(--background) url(./image/page_background.png) repeat-x;
     font-family: 'Noticia Text', serif;
     color: var(--white);
 }
@@ -299,6 +300,146 @@ a{
 /* --------- Main Menu end ------ */
 
 
+/* ---------- Menu Content start */
+
+#MenuContent{
+    margin: 10px 0 25px;
+}
+
+.menu-content-main{
+    border-bottom: 5px solid var(--secondaryDark);
+    padding-bottom:10px ;
+    display: flex;
+    justify-content: space-between;
+    height: 440px;
+}
+
+.menu-item-info{
+    padding-right:10px ;
+}
+/* ___________ l i s t ________  */
+.menu-content-slider{
+    width: 100%;
+    max-width: 320px;
+}
+/* ^^^^ hover ^^^^ */
+
+.menu-content-slider .menu-list li:hover{
+    border-left-color:var(--primarty);
+}
+.menu-content-slider .menu-list li:hover a{
+    border-left-color:var(--primarty);
+}
+
+/* slider */
+.menu-content-slider .menu-list{
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+}
+.menu-content-slider .menu-list li{
+    max-width: 350px;
+    width: 320px;
+    height: 88px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    border-left: 1px solid var(--secondaryDark);
+    border-bottom: 0;
+    overflow: hidden;
+    margin-bottom: -7px;
+}
+.menu-content-slider .menu-list li:nth-child(5n){
+    margin-right: 0;
+   
+}
+.menu-content-slider .menu-list a{
+    display: block;
+    height: 100%;
+    position: relative;
+    border-left: 2px solid var(--background);
+}
+
+.menu-content-slider .menu-item-content{
+    margin: 0 0 0 30px;
+    flex-direction: row;
+    height: 100%;
+}
+.menu-content-slider .menu-item-content div{
+    margin: 0 0 0 20px;
+}
+.menu-content-slider .menu-item-content div h2{
+    font-size: 18px;
+    margin: 3px 0 2px;
+}
+.menu-content-slider .menu-item-content span {
+    font-size: 14px;
+    
+}
+
+
+/* === React Slick carousel */
+.menu-content-slider .slick-prev, .menu-content-slider .slick-next {
+    
+    width: 20px!important;
+    height: 20px!important;
+    left: 282px!important;
+
+
+}
+.menu-content-slider .slick-prev{
+    content: ' '!important;
+    top: 212px!important;
+    z-index: 10!important;
+    background: url(./image/mainMenu/navigation_arrow_up.png)!important;
+
+
+}
+.menu-content-slider .slick-next{
+    top: 235px!important;
+    content: ' '!important;
+    right: 0px!important;
+    background: url(./image/mainMenu/navigation_arrow_down.png)!important;
+
+}
+.menu-content-slider .slick-prev:hover, .slick-next:hover {
+    background-position: 0 -15px!important;
+
+}
+.menu-content-slider .slick-prev::before{
+    display: none!important;
+    /* width: 15px!important;
+    height: 15px!important;
+    position: absolute!important;
+    content: ' '!important;
+    background: red!important;
+    top: 0px!important;
+    left: 0px!important; */
+}
+.menu-content-slider .slick-next::before{
+    display: none!important;
+    /* width: 15px!important;
+    height: 15px!important;
+    position: absolute!important;
+    content: ''!important;
+    background: red!important;
+    top: 0px!important;
+    right: 0px!important;
+    background-position: 0 0px!important; */
+
+}
+.menu-content-slider .slick-prev::before:hover{
+    background-position: 0 -15px!important;
+}
+/* === React Slick carousel */
+
+
+/* ____^__^__^___ l i s t ___^__^__^____  */
+/* ____ __ __ ___         ___ __ __ ____  */
+
+
+/* ---------- Menu Content end */
+
+
 
 /* ------- Main end ----------- */
 
@@ -541,3 +682,4 @@ a{
     margin-left: 15px;
 }
 /* -------- Footer Bottom end */
+}
