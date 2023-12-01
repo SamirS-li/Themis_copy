@@ -1,5 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
+
+import PageTitle from "./PageTitle";
+
 import '../../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../../node_modules/slick-carousel/slick/slick-theme.css';
 import img1 from '../../../image/mainMenu/about-page/slider_img1_thumb.jpg';
@@ -8,6 +11,7 @@ import img3 from '../../../image/mainMenu/about-page/slider_img3_thumb.jpg';
 import img1_2 from '../../../image/mainMenu/about-page/slider_img1.jpg';
 import img2_2 from '../../../image/mainMenu/about-page/slider_img2.jpg';
 import img3_2 from '../../../image/mainMenu/about-page/slider_img3.jpg';
+
 
 
 
@@ -26,7 +30,8 @@ export default class About extends React.Component {
 
         return(
         <div id="about-page">
-            <h2>About</h2>
+           <PageTitle pageName="About"/>
+
             <div className="about-main">
                 <div className="about-personal-info">
                     <div className="about-image">
