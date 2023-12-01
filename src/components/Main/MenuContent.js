@@ -40,8 +40,8 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>services</h2>
+                                            <span>Legal Services</span>
                                         </div>
                                 </div>
                             </a>
@@ -51,8 +51,8 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>Clients</h2>
+                                            <span>Testimonials</span>
                                         </div>
                                 </div>
                             </a>
@@ -62,8 +62,8 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>Practice</h2>
+                                            <span>Practice of Law</span>
                                         </div>
                                 </div>
                             </a>
@@ -73,8 +73,8 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>Contact</h2>
+                                            <span>Get In Touch</span>
                                         </div>
                                 </div>
                             </a>
@@ -95,8 +95,8 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>services</h2>
+                                            <span>Legal Services</span>
                                         </div>
                                 </div>
                             </a>
@@ -106,8 +106,8 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>Clients</h2>
+                                            <span>Testimonials</span>
                                         </div>
                                 </div>
                             </a>
@@ -117,8 +117,8 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>Practice</h2>
+                                            <span>Practice of Law</span>
                                         </div>
                                 </div>
                             </a>
@@ -128,12 +128,13 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
-                                            <h2>about</h2>
-                                            <span>mark antony</span>
+                                            <h2>Contact</h2>
+                                            <span>Get In Touch</span>
                                         </div>
                                 </div>
                             </a>
                         </li>
+                        
                     </Slider>
                         </div>
 
