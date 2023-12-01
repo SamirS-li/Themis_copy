@@ -494,6 +494,42 @@
   
   
   /* ____^_^_^_ a b o u t   e n d _^_^_^___ */
+
+
+  /* __________ S e r v i c e s  p a g e _______ */
+
+
+  .services-section{
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .services-image{
+    min-width: 80px;
+    height: 80px;
+    padding: 5px;
+    margin-right: 16px;
+    border: 1px solid #5D514B;
+  }
+
+  .servces-info-title{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+
+  .services-info-content{
+    font-size: 12px;
+    color: var(--secondary);
+    font-family: 'Voces', cursive;
+    padding-top: 15px;
+    line-height: 1.5;
+  }
+
+  /* ____^_^_^_ S e r v i c e s   e n d _^_^_^___ */
+
+
   
   
   /* __^__^__^__^__^__^__^__^__^__^__^__ */
