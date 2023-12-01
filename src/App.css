@@ -573,7 +573,7 @@
   }
   body{
     cursor: default;
-    height: 90000px;
+
   }
   #clients-page::-webkit-scrollbar-thumb:hover {
     background-color:var(--primarty);
