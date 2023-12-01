@@ -34,6 +34,11 @@
       margin: 0 auto;
   }
   
+  .page-title {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
   /* ------- Header start -------- */
   #Header{
       padding: 10px 0;
@@ -329,11 +334,7 @@
   }
   
   
-  #about-page h2{
-      font-size: 30px;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }
+  
   
   .about-image{
       position: relative;

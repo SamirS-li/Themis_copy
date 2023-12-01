@@ -1,9 +1,10 @@
 import React from "react";
+import PageTitle from "./PageTitle";
 
 export default function Services(){
     return(
-        <div>
-            <h6>This is Services Contnet component</h6>
+        <div id="services-page">
+            <PageTitle pageName="Services"/>
         </div>
     )
 }
