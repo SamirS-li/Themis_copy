@@ -588,15 +588,17 @@ a{
     background: url(./image/mainMenu/navigation_arrow_down.png)!important;
 
 }
+
 .menu-content-slider .slick-prev:hover, .menu-content-slider .slick-next:hover {
     background-position: 0 -19px!important;
-
 }
 .menu-content-slider .slick-prev::before{
     display: none!important;
+  
 }
 .menu-content-slider .slick-next::before{
     display: none!important;
+
 
 }
 .menu-content-slider .slick-prev::before:hover{

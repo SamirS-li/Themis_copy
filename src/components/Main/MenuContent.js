@@ -41,8 +41,11 @@ export default class MenuContent extends React.Component {
                                 <div className="menu-item-content">
                                         <i></i>
                                         <div>
+
                                             <h2>services</h2>
                                             <span>Legal Services</span>
+
+                                             
                                         </div>
                                 </div>
                             </a>
@@ -135,7 +138,6 @@ export default class MenuContent extends React.Component {
                                 </div>
                             </a>
                         </li>
-                        
                     </Slider>
                         </div>
 
