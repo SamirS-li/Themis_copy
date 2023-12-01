@@ -40,6 +40,7 @@
     font-weight: 400;
     margin-bottom: 30px;
 }
+
   /* ------- Header start -------- */
   #Header{
       padding: 10px 0;
@@ -336,7 +337,6 @@
   
   
   
-  
   .about-image{
       position: relative;
       width: 180px;
@@ -497,6 +497,7 @@
   /* ____^_^_^_ a b o u t   e n d _^_^_^___ */
 
 
+
   /* __________ S e r v i c e s  p a g e _______ */
 
 
@@ -529,6 +530,7 @@
   }
 
   /* ____^_^_^_ S e r v i c e s   e n d _^_^_^___ */
+
 
 
   
