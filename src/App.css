@@ -39,7 +39,9 @@
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 30px;
+
     text-transform: capitalize;
+
 }
 
   /* ------- Header start -------- */
@@ -533,6 +535,7 @@
 
   /* ____^_^_^_ S e r v i c e s   e n d _^_^_^___ */
 
+
  /*  ___________ C l e n t s  p a g e _________ */
   #clients-page{
     overflow-y:scroll ;
@@ -600,6 +603,7 @@
   /* ____^_^_^_ C l i e n t s   e n d _^_^_^___ */
 
   
+
   
   
   /* __^__^__^__^__^__^__^__^__^__^__^__ */
