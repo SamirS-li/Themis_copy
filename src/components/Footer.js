@@ -25,7 +25,32 @@ export default function Footer (){
             },100)
         }
        
-        
+         // find Top size for vertical
+
+     function VerticalEndSize(){
+        let Height=0;
+        let fullHeight=0;
+        let topSize=0;
+        let carousel =document.querySelector('.App').querySelector('.carousel');
+        Height = carousel.lastChild.offsetHeight;
+        Height +=" "+ window.getComputedStyle(carousel.lastChild).marginBottom;
+        Height +=" "+ window.getComputedStyle(carousel.lastChild).marginTop
+        Height +=" "+ window.getComputedStyle(carousel.lastChild).paddingBottom;
+        Height +=" "+ window.getComputedStyle(carousel.lastChild).paddingTop;
+        Height +=" "+ window.getComputedStyle(carousel.lastChild).borderBottom.split(' ')[0];
+        Height +=" "+ window.getComputedStyle(carousel.lastChild).borderTop.split(' ')[0]
+        Height.replaceAll('px',"").split(' ').forEach((item)=>{
+            fullHeight+= +item;
+        });
+        // End size
+        topSize = fullHeight * carousel.childElementCount;
+
+        setMinSize(-topSize);
+        setMaxSize(-fullHeight);
+        return topSize;
+
+     }
+
 
 
 
@@ -72,32 +97,7 @@ export default function Footer (){
     },[])
     //  -------------------------------
 
-      // find Top size for vertical
-
-     function VerticalEndSize(){
-        let Height=0;
-        let fullHeight=0;
-        let topSize=0;
-        let carousel =document.querySelector('.App').querySelector('.carousel');
-        Height = carousel.lastChild.offsetHeight;
-        Height +=" "+ window.getComputedStyle(carousel.lastChild).marginBottom;
-        Height +=" "+ window.getComputedStyle(carousel.lastChild).marginTop
-        Height +=" "+ window.getComputedStyle(carousel.lastChild).paddingBottom;
-        Height +=" "+ window.getComputedStyle(carousel.lastChild).paddingTop;
-        Height +=" "+ window.getComputedStyle(carousel.lastChild).borderBottom.split(' ')[0];
-        Height +=" "+ window.getComputedStyle(carousel.lastChild).borderTop.split(' ')[0]
-        Height.replaceAll('px',"").split(' ').forEach((item)=>{
-            fullHeight+= +item;
-        });
-        // End size
-        topSize = fullHeight * carousel.childElementCount;
-
-        setMinSize(-topSize);
-        setMaxSize(-fullHeight);
-        return topSize;
-
-     }
-
+     
 
     
 
