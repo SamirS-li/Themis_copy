@@ -313,6 +313,11 @@ a{
     height: 440px;
 }
 
+.menu-content-container{
+    display: flex;
+    justify-content: end;
+}
+
 .menu-item-info{
     padding-right:10px ;
 }
@@ -388,7 +393,7 @@ a{
 .menu-content-slider .slick-prev{
     content: ' '!important;
     top: 212px!important;
-    z-index: 10!important;
+    z-index: 1!important;
     background: url(./image/mainMenu/navigation_arrow_up.png)!important;
 
 
@@ -400,30 +405,15 @@ a{
     background: url(./image/mainMenu/navigation_arrow_down.png)!important;
 
 }
-.menu-content-slider .slick-prev:hover, .slick-next:hover {
-    background-position: 0 -15px!important;
+.menu-content-slider .slick-prev:hover, .menu-content-slider .slick-next:hover {
+    background-position: 0 -19px!important;
 
 }
 .menu-content-slider .slick-prev::before{
     display: none!important;
-    /* width: 15px!important;
-    height: 15px!important;
-    position: absolute!important;
-    content: ' '!important;
-    background: red!important;
-    top: 0px!important;
-    left: 0px!important; */
 }
 .menu-content-slider .slick-next::before{
     display: none!important;
-    /* width: 15px!important;
-    height: 15px!important;
-    position: absolute!important;
-    content: ''!important;
-    background: red!important;
-    top: 0px!important;
-    right: 0px!important;
-    background-position: 0 0px!important; */
 
 }
 .menu-content-slider .slick-prev::before:hover{
@@ -498,7 +488,6 @@ a{
 .slick-prev{
     content: ' '!important;
     left: 282px!important;
-    z-index: 10!important;
     background: url(./image/icon_navbar_up.png)!important;
 
 
