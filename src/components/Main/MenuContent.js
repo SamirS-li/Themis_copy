@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import About from "./Menu/About"
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
 
@@ -18,7 +19,7 @@ export default class MenuContent extends React.Component {
             <div className="menu-content-container">
                 <div className="menu-content-main">
                     <div className="menu-item-info">
-                     <h2>menu item info</h2>
+                    <About/>
 
                     </div>
                     <div className="menu-content-list">
