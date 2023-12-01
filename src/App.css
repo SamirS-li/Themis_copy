@@ -573,6 +573,7 @@
   }
   body{
     cursor: default;
+
   }
   #clients-page::-webkit-scrollbar-thumb:hover {
     background-color:var(--primarty);

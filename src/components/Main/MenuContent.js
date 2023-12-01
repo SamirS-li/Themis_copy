@@ -11,7 +11,6 @@ import Contact from "./Menu/Contact";
 import Practice from "./Menu/Practice";
 
 
-
 export default class MenuContent extends React.Component {
     render() {
         const settings = {
@@ -23,6 +22,7 @@ export default class MenuContent extends React.Component {
           vertical:true,
         };
     return(
+
         <Router>
              <div id="MenuContent">
                  <div className="menu-content-container">
@@ -31,7 +31,7 @@ export default class MenuContent extends React.Component {
                          {/* <About/> */}
                          {/* <Services/> */}
                          {/* <Clients/> */}
-                         <Routes>
+                          <Routes>
                             <Route
                                 exact
                                 path="/about"
@@ -57,9 +57,8 @@ export default class MenuContent extends React.Component {
                                 path="/practice"
                                 element={<Practice />}> 
                             </Route>
-                        </Routes>
-
-                         </div>
+                          </Routes>
+                        </div>
                          <div className="menu-content-list">
                           <div className="menu-content-slider">
                              <Slider {...settings} className="menu-list">
@@ -121,61 +120,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             {/* <li id="about">
-                                 <Link to="/about">
-                                     <div className="menu-item-content">
-                                             <i></i>
-                                             <div>
-                                                 <h2>about</h2>
-                                                 <span>mark antony</span>
-                                             </div>
-                                     </div>
-                                 </Link>
-                             </li>
-                             <li id="services">
-                                 <Link to="/about">
-                                     <div className="menu-item-content">
-                                             <i></i>
-                                             <div>
-                                                 <h2>services</h2>
-                                                 <span>Legal Services</span>
-                                             </div>
-                                     </div>
-                                 </Link>
-                             </li>
-                             <li id="clients">
-                                 <Link to="/about">
-                                     <div className="menu-item-content">
-                                             <i></i>
-                                             <div>
-                                                 <h2>Clients</h2>
-                                                 <span>Testimonials</span>
-                                             </div>
-                                     </div>
-                                 </Link>
-                             </li>
-                             <li id="practice">
-                                 <Link to="/about">
-                                     <div className="menu-item-content">
-                                             <i></i>
-                                             <div>
-                                                 <h2>Practice</h2>
-                                                 <span>Practice of Law</span>
-                                             </div>
-                                     </div>
-                                 </Link>
-                             </li>
-                             <li id="contact">
-                                 <Link to="/about">
-                                     <div className="menu-item-content">
-                                             <i></i>
-                                             <div>
-                                                 <h2>Contact</h2>
-                                                 <span>Get In Touch</span>
-                                             </div>
-                                     </div>
-                                 </Link>
-                             </li> */}
+                             
                          </Slider>
                              </div>
                              
