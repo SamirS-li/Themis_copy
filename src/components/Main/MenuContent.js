@@ -120,7 +120,64 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             
+                             <li id="about">
+                                 <Link to="/about">
+                                     <div className="menu-item-content">
+                                             <i></i>
+                                             <div>
+                                                 <h2>about</h2>
+                                                 <span>mark antony</span>
+                                             </div>
+                                     </div>
+                                 </Link>
+                             </li>
+                             <li id="services">
+                                 <Link to="/services">
+                                     <div className="menu-item-content">
+                                             <i></i>
+                                             <div>
+
+                                                 <h2>services</h2>
+                                                 <span>Legal Services</span>
+
+                                             </div>
+                                     </div>
+                                 </Link>
+                             </li>
+                             <li id="clients">
+                                 <Link to="/clients">
+                                     <div className="menu-item-content">
+                                             <i></i>
+                                             <div>
+                                                 <h2>Clients</h2>
+                                                 <span>Testimonials</span>
+                                             </div>
+                                     </div>
+                                 </Link>
+                             </li>
+                             <li id="practice">
+                                 <Link to="/practice">
+                                     <div className="menu-item-content">
+                                             <i></i>
+                                             <div>
+                                                 <h2>Practice</h2>
+                                                 <span>Practice of Law</span>
+                                             </div>
+                                     </div>
+                                 </Link>
+                             </li>
+                             <li id="contact">
+                                 <Link to="/contact">
+                                     <div className="menu-item-content">
+                                             <i></i>
+                                             <div>
+                                                 <h2>Contact</h2>
+                                                 <span>Get In Touch</span>
+                                             </div>
+                                     </div>
+                                 </Link>
+                             </li>
+
                          </Slider>
                              </div>
                              
