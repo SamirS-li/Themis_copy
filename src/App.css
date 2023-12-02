@@ -568,13 +568,7 @@
     background-color:var(--secondaryDark);
     cursor: pointer;
   }
-  html{
-    cursor: pointer;
-  }
-  body{
-    cursor: default;
-
-  }
+ 
   #clients-page::-webkit-scrollbar-thumb:hover {
     background-color:var(--primarty);
   }
@@ -601,6 +595,78 @@
  }
 
   /* ____^_^_^_ C l i e n t s   e n d _^_^_^___ */
+
+
+  /* ____________ P r a c t i c e ____________  */
+
+
+ #practice-page{
+    overflow-y: scroll;
+    height: 440px;
+   
+ }
+
+ #practice-page::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  
+   
+  #practice-page::-webkit-scrollbar-thumb {
+    background-color:var(--secondaryDark);
+    cursor: pointer;
+  }
+  #practice-page::-webkit-scrollbar-thumb:hover {
+    background-color:var(--primarty);
+  }
+
+ 
+
+ .practice-header-title{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+ }
+
+ .practice-header-info{
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 'Voces', cursive;
+    padding:18px 0 40px;
+ }
+
+ .practice-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+ }
+ .practice-list-item{
+    
+    width: 48%;
+    margin-bottom: 35px;
+ }
+
+
+ .practice-item-title{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding-left: 25px;
+    background-image: url(./image/mainMenu/practice-list-item.png);
+    background-repeat: no-repeat;
+ }
+
+ .practice-item-info{
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 'Voces', cursive;
+    padding-top:15px;
+ }
+
+  /* ____^_^_^_ P r a c t i c e   e n d _^_^_^___ */
 
   
 
