@@ -121,7 +121,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             {/* <li id="about">
+                             <li id="about">
                                  <Link to="/about">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -133,18 +133,21 @@ export default class MenuContent extends React.Component {
                                  </Link>
                              </li>
                              <li id="services">
-                                 <Link to="/about">
+                                 <Link to="/services">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
+
                                                  <h2>services</h2>
                                                  <span>Legal Services</span>
+
+
                                              </div>
                                      </div>
                                  </Link>
                              </li>
                              <li id="clients">
-                                 <Link to="/about">
+                                 <Link to="/clients">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -155,7 +158,7 @@ export default class MenuContent extends React.Component {
                                  </Link>
                              </li>
                              <li id="practice">
-                                 <Link to="/about">
+                                 <Link to="/practice">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -166,7 +169,7 @@ export default class MenuContent extends React.Component {
                                  </Link>
                              </li>
                              <li id="contact">
-                                 <Link to="/about">
+                                 <Link to="/contact">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -175,7 +178,8 @@ export default class MenuContent extends React.Component {
                                              </div>
                                      </div>
                                  </Link>
-                             </li> */}
+                             </li>
+                            
                          </Slider>
                              </div>
                              
