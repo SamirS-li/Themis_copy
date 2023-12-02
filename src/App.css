@@ -568,7 +568,7 @@
     background-color:var(--secondaryDark);
     cursor: pointer;
   }
- 
+
   #clients-page::-webkit-scrollbar-thumb:hover {
     background-color:var(--primarty);
   }

@@ -140,7 +140,6 @@ export default class MenuContent extends React.Component {
                                                  <h2>services</h2>
                                                  <span>Legal Services</span>
 
-
                                              </div>
                                      </div>
                                  </Link>
@@ -178,7 +177,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                            
+
                          </Slider>
                              </div>
                              
