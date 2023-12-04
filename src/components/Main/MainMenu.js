@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -9,7 +10,7 @@ export default function MainMenu(){
                 <div className="menu-main-div">
                     <ul className="menu-list">
                         <li id="about">
-                            <a href="#">
+                            <Link to="/menuContent/about">
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -23,10 +24,10 @@ export default function MainMenu(){
                                         <h2>about</h2>
                                         <span>mark antony</span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li id="services">
-                            <a href="#">
+                            <Link to="/menuContent/services" >
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -40,10 +41,10 @@ export default function MainMenu(){
                                         <h2>about</h2>
                                         <span>mark antony</span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li id="clients">
-                            <a href="#">
+                            <Link to="/menuContent/clients" >
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -57,10 +58,10 @@ export default function MainMenu(){
                                         <h2>about</h2>
                                         <span>mark antony</span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li id="practice">
-                            <a href="#">
+                            <Link to="/menuContent/practice" >
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -74,10 +75,10 @@ export default function MainMenu(){
                                         <h2>about</h2>
                                         <span>mark antony</span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li id="contact">
-                            <a href="#">
+                            <Link to="/menuContent/contact" >
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -91,7 +92,7 @@ export default function MainMenu(){
                                         <h2>about</h2>
                                         <span>mark antony</span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
 
 

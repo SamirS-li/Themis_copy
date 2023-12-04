@@ -23,7 +23,7 @@ export default class MenuContent extends React.Component {
         };
     return(
 
-        <Router>
+        
              <div id="MenuContent">
                  <div className="menu-content-container">
                      <div className="menu-content-main">
@@ -63,7 +63,7 @@ export default class MenuContent extends React.Component {
                           <div className="menu-content-slider">
                              <Slider {...settings} className="menu-list">
                              <li id="about">
-                                 <Link to="/about">
+                                 <Link to="/menuContent/about">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -74,7 +74,7 @@ export default class MenuContent extends React.Component {
                                  </Link>
                              </li>
                              <li id="services">
-                                 <Link to="/services">
+                                 <Link to="/menuContent/services">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -88,7 +88,7 @@ export default class MenuContent extends React.Component {
                                  </Link>
                              </li>
                              <li id="clients">
-                                 <Link to="/clients">
+                                 <Link to="/menuContent/clients">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -99,7 +99,7 @@ export default class MenuContent extends React.Component {
                                  </Link>
                              </li>
                              <li id="practice">
-                                 <Link to="/practice">
+                                 <Link to="/menuContent/practice">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -110,7 +110,7 @@ export default class MenuContent extends React.Component {
                                  </Link>
                              </li>
                              <li id="contact">
-                                 <Link to="/contact">
+                                 <Link to="/menuContent/contact">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -120,7 +120,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             <li id="about">
+                             <li id="/menuContent/about">
                                  <Link to="/about">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -131,7 +131,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             <li id="services">
+                             <li id="/menuContent/services">
                                  <Link to="/services">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -145,7 +145,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             <li id="clients">
+                             <li id="/menuContent/clients">
                                  <Link to="/clients">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -156,7 +156,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             <li id="practice">
+                             <li id="/menuContent/practice">
                                  <Link to="/practice">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -167,7 +167,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </Link>
                              </li>
-                             <li id="contact">
+                             <li id="/menuContent/contact">
                                  <Link to="/contact">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -188,7 +188,7 @@ export default class MenuContent extends React.Component {
                  </div>
                  {/* <Menus/> */}
              </div>
-        </Router>
+        
       )
     }
 }
