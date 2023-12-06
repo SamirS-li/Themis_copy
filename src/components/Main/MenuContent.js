@@ -128,6 +128,7 @@ export default class MenuContent extends React.Component {
                                  </NavLink>
                              </li>
                              <li id="about">
+
                                  <NavLink activeClassName="activeList-a" to="/menuContent/about">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -136,10 +137,12 @@ export default class MenuContent extends React.Component {
                                                  <span>mark antony</span>
                                              </div>
                                      </div>
+
                                  </NavLink>
                              </li>
                              <li id="services">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/services">
+
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -148,12 +151,14 @@ export default class MenuContent extends React.Component {
                                                  <span>Legal Services</span>
 
 
+
                                              </div>
                                      </div>
                                  </NavLink>
                              </li>
                              <li id="clients">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/clients">
+
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -161,6 +166,7 @@ export default class MenuContent extends React.Component {
                                                  <span>Testimonials</span>
                                              </div>
                                      </div>
+
                                  </NavLink>
                              </li>
                              <li id="practice">
@@ -176,6 +182,7 @@ export default class MenuContent extends React.Component {
                              </li>
                              <li id="contact">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/contact">
+
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -183,9 +190,11 @@ export default class MenuContent extends React.Component {
                                                  <span>Get In Touch</span>
                                              </div>
                                      </div>
+
                                  </NavLink>
                              </li>
                             
+
                          </Slider>
                              </div>
                              
