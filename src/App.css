@@ -131,6 +131,7 @@
       height: auto;
   }
   .menu-main-div{
+    position: relative;
       margin: 8px 0 30px;
   }
   .menu-list{
@@ -138,6 +139,9 @@
       height: max-content;
       overflow: hidden;
   }
+
+
+
   .menu-list li{
       display: inline-block;
       width: 100%;
@@ -157,6 +161,51 @@
       height: 100%;
       position: relative;
   }
+
+/* === React Slick carousel === */
+.menu-main-div .slick-slider{
+    position: static;
+}
+.menu-main-div .slick-prev, .menu-main-div .slick-next {
+    top: 220px!important;
+    width: 20px!important;
+    height: 24px!important;
+
+
+}
+.menu-main-div .slick-prev{
+    content: ' '!important;
+    position: absolute;
+    left: -40px!important;
+
+    z-index: 10!important;
+    background: url(./image/mainMenu/main_navigation_arrow_left.png)!important;
+
+
+}
+.menu-main-div .slick-next{
+    top: 235px!important;
+    content: ' '!important;
+    right: -40px!important;
+    background: url(./image/mainMenu/main_navigation_arrow_right.png)!important;
+
+}
+.menu-main-div .slick-prev:hover, .menu-main-div .slick-next:hover {
+    background-position: 0 -25px!important;
+
+}
+.menu-main-div .slick-prev::before{
+    display: none!important;
+}
+.menu-main-div .slick-next::before{
+    display: none!important;
+
+}
+.menu-main-div .slick-prev::before:hover{
+    background-position: 0 -15px!important;
+}
+/* === React Slick carousel */
+
   /* ^^^^^^^^^^^^^ ^^ Hoveer ^^ ^^^^^^^^^^^^^^^^^^^ */
   
   .menu-list li:hover{
@@ -319,13 +368,31 @@
       border-bottom: 5px solid var(--secondaryDark);
       padding-bottom:10px ;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       height: 440px;
   }
+
+  .content-close-button{
+    width: 20px;
+    height: 20px;
+    background:url(./image/mainMenu/close_button.png);
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+  }
+  .content-close-button:hover{
+    background-position: 0 -20px;
+  }
+
+  .menu-content-list{position: relative;}
   
   .menu-item-info{
+      overflow: hidden;
       padding-right:8px ;
       width: 668px;
+      transition: all 2s linear;
   }
   
   /* ___________ M e n u  i t e m  i n f o ________  */
@@ -334,6 +401,7 @@
   
   #about-page{
       width: 660px;
+      transition: all 2s linear;
   }
   .about-personal-info{
       display: flex;
@@ -668,6 +736,83 @@
 
   /* ____^_^_^_ P r a c t i c e   e n d _^_^_^___ */
 
+
+ /*  ___________ C o n t a c t   p a g e _________ */
+
+
+ .contact-main{
+    display: flex;
+ }
+ .contact-info{
+    padding-bottom: 20px;
+    margin-right: 80px;
+ }
+
+ .contact-div-title{
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+ }
+ .contact-info-item{
+    margin-bottom:25px ;
+    padding-left: 20px;
+    border-left: 1px solid var(--primarty);
+ }
+ .contact-info-title{
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 10px;
+ }
+ .contact-info-content>p{
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--secondary);
+    font-family: 'Voces', cursive;
+ }
+
+ .contact-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+ }
+ .contact-form form input,.contact-form form textarea{
+    background-color:transparent;
+    border: 1px solid var(--secondaryDark);
+    padding: 10px;
+    color: var(--secondary);
+    outline: 0;
+    font-size: 12px;
+    font-family: 'Voces', cursive;
+    margin-bottom: 10px;
+    width: 250px;
+    
+
+ }
+ .contact-form form button{
+    width: 80px;
+    height: 35px;
+    border: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Voces', cursive;
+    color: var(--white);
+    background: url('./image/mainMenu/button.png');
+    cursor:pointer;
+
+ }
+ .contact-form form button:hover{
+   background-position: 0 -35px;
+ }
+
+
+  /* ____^_^_^_ C o n t a c t   e n d _^_^_^___ */
+
+
+
   
 
   
@@ -676,6 +821,7 @@
   
   
   /* ___________ menu content l i s t ________  */
+
   .menu-content-slider{
       width: 100%;
       max-width: 320px;
@@ -688,6 +834,16 @@
   .menu-content-slider .menu-list li:hover a{
       border-left-color:var(--primarty);
   }
+
+  /* React router */
+  .menu-content-slider .menu-list a.active{
+    border-left:2px solid var(--primarty)!important;
+  }
+  .menu-content-slider .menu-list li:has(> a.active){
+    border-left:1px solid var(--primarty)!important;
+  }
+  
+/* React router */
   
   /* slider */
   .menu-content-slider .menu-list{
@@ -698,7 +854,7 @@
   .menu-content-slider .menu-list li{
       max-width: 350px;
       width: 320px;
-      height: 88px;
+      height: 87.9px;
       box-sizing: border-box;
       margin-right: 10px;
       border-left: 1px solid var(--secondaryDark);
@@ -842,7 +998,7 @@
   .slick-prev{
       content: ' '!important;
       left: 282px!important;
-      z-index: 10!important;
+      z-index: 0!important;
       background: url(./image/icon_navbar_up.png)!important;
   
   
@@ -859,24 +1015,9 @@
   }
   .slick-prev::before{
       display: none!important;
-      /* width: 15px!important;
-      height: 15px!important;
-      position: absolute!important;
-      content: ' '!important;
-      background: red!important;
-      top: 0px!important;
-      left: 0px!important; */
   }
   .slick-next::before{
       display: none!important;
-      /* width: 15px!important;
-      height: 15px!important;
-      position: absolute!important;
-      content: ''!important;
-      background: red!important;
-      top: 0px!important;
-      right: 0px!important;
-      background-position: 0 0px!important; */
   
   }
   .slick-prev::before:hover{

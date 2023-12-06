@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
-import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom"
+import {BrowserRouter as Router,Routes,Route,NavLink,redirect} from "react-router-dom"
 import About from "./Menu/About";
 import Services from "./Menu/Services";
 
@@ -21,16 +21,22 @@ export default class MenuContent extends React.Component {
           slidesToScroll: 1,
           vertical:true,
         };
+        
+
+        
     return(
 
         
-             <div id="MenuContent">
+             <div id="MenuContent" >
                  <div className="menu-content-container">
                      <div className="menu-content-main">
+
+                     
                          <div className="menu-item-info">
-                         {/* <About/> */}
-                         {/* <Services/> */}
-                         {/* <Clients/> */}
+
+
+
+                         
                           <Routes>
                             <Route
                                 exact
@@ -60,10 +66,11 @@ export default class MenuContent extends React.Component {
                           </Routes>
                         </div>
                          <div className="menu-content-list">
+                            <NavLink to='/' className="content-close-button"></NavLink>
                           <div className="menu-content-slider">
                              <Slider {...settings} className="menu-list">
                              <li id="about">
-                                 <Link to="/menuContent/about">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/about">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -71,10 +78,10 @@ export default class MenuContent extends React.Component {
                                                  <span>mark antony</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
                              <li id="services">
-                                 <Link to="/menuContent/services">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/services">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -85,10 +92,10 @@ export default class MenuContent extends React.Component {
 
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
                              <li id="clients">
-                                 <Link to="/menuContent/clients">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/clients" >
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -96,10 +103,10 @@ export default class MenuContent extends React.Component {
                                                  <span>Testimonials</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
                              <li id="practice">
-                                 <Link to="/menuContent/practice">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/practice">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -107,10 +114,10 @@ export default class MenuContent extends React.Component {
                                                  <span>Practice of Law</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
                              <li id="contact">
-                                 <Link to="/menuContent/contact">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/contact">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -118,10 +125,10 @@ export default class MenuContent extends React.Component {
                                                  <span>Get In Touch</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
-                             <li id="/menuContent/about">
-                                 <Link to="/about">
+                             <li id="about">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/about">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -129,10 +136,10 @@ export default class MenuContent extends React.Component {
                                                  <span>mark antony</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
-                             <li id="/menuContent/services">
-                                 <Link to="/services">
+                             <li id="services">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/services">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -140,12 +147,13 @@ export default class MenuContent extends React.Component {
                                                  <h2>services</h2>
                                                  <span>Legal Services</span>
 
+
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
-                             <li id="/menuContent/clients">
-                                 <Link to="/clients">
+                             <li id="clients">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/clients">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -153,10 +161,10 @@ export default class MenuContent extends React.Component {
                                                  <span>Testimonials</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
-                             <li id="/menuContent/practice">
-                                 <Link to="/practice">
+                             <li id="practice">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/practice">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -164,10 +172,10 @@ export default class MenuContent extends React.Component {
                                                  <span>Practice of Law</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
-                             <li id="/menuContent/contact">
-                                 <Link to="/contact">
+                             <li id="contact">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/contact">
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -175,9 +183,9 @@ export default class MenuContent extends React.Component {
                                                  <span>Get In Touch</span>
                                              </div>
                                      </div>
-                                 </Link>
+                                 </NavLink>
                              </li>
-
+                            
                          </Slider>
                              </div>
                              

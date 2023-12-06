@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router,Routes,Route,Navigate } from "react-router-dom";
+import { BrowserRouter as Router,Routes,Route,redirect} from "react-router-dom";
 import MainMenu from './MainMenu';
 import MenuContent from './MenuContent';
 import About from "./Menu/About";
@@ -11,9 +11,12 @@ import Contact from "./Menu/Contact";
 
 
 export default function Main(){
+    
+   
+    
     return(
 
-        <div id="Main">
+        <div id="Main" >
             <Router>
                 <Routes>
                 {/* <Route index element={<MainMenu />} /> */}
