@@ -16,6 +16,37 @@ import img3_2 from '../../../image/mainMenu/about-page/slider_img3.jpg';
 
 
 export default class About extends React.Component {
+
+
+  
+
+    componentDidMount() {
+        // document.addEventListener('click',(e)=>{
+        //     console.log('e target:',e.target.type=='button')
+        // })
+
+        let imgList2 = document.querySelector('.img-list2');
+        let imgList1 = document.querySelector('.img-list1');
+        
+
+        imgList1.addEventListener('click',(e)=>{
+            console.log('e target:',e.target.type)
+            if(!e.target.type){
+                imgList2.style.display = 'block';
+                imgList1.style.display = 'none';
+            }
+         })
+
+        imgList2.addEventListener('click',(e)=>{
+            if(!e.target.type){
+                imgList2.style.display = 'none';
+                imgList1.style.display = 'block';
+            }
+
+        })
+    }
+    
+    
     render() {
         const settings = {
           dots: false,
@@ -26,6 +57,15 @@ export default class About extends React.Component {
           fade:true,
         };
         
+        const list1show = ()=>{
+            console.log('list1Show')
+        }
+        const list2show = ()=>{
+            console.log('list2Show')
+        }
+        
+        
+
     
 
         return(
@@ -33,18 +73,19 @@ export default class About extends React.Component {
            <PageTitle pageName="About"/>
 
             <div className="about-main">
-                <div className="about-personal-info">
+                <div  className="about-personal-info">
                     <div className="about-image">
-                        <Slider {...settings} className="about-img-list img-list1" >
-                            <li><a href=""><img src={img1} alt="" /></a></li>
-                            <li><a href=""><img src={img2} alt="" /></a></li>
-                            <li><a href=""><img src={img3} alt="" /></a></li>
+                        <Slider  {...settings} className="about-img-list img-list1" >
+                            <li><a href=""><img src={img1} alt="" onClick={list2show}/></a></li>
+                            <li><a href=""><img src={img2} alt="" onClick={list2show}/></a></li>
+                            <li><a href=""><img src={img3} alt="" onClick={list2show}/></a></li>
                         </Slider>
-                        {/* <Slider {...settings} className="about-img-list img-list2">
-                            <li><a href=""><img src={img1_2} alt="" /></a></li>
-                            <li><a href=""><img src={img2_2} alt="" /></a></li>
-                            <li><a href=""><img src={img3_2} alt="" /></a></li>
-                        </Slider> */}
+
+                        <Slider style={{display:'none'}} {...settings} className="about-img-list img-list2">
+                            <li><a href=""><img src={img1_2} alt="" onClick={list1show}/></a></li>
+                            <li><a href=""><img src={img2_2} alt="" onClick={list1show}/></a></li>
+                            <li><a href=""><img src={img3_2} alt="" onClick={list1show}/></a></li>
+                        </Slider>
                     </div>
                     <div className="about-info">
                         <h3>mark anthony</h3>
