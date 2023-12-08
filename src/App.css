@@ -258,6 +258,9 @@
   #about:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_about_hover.png);
   }
+  #about  a.active i{
+      background: url(./image/mainMenu/icon_about_hover.png);
+  }
   
   
   /* ____s_e_r_v_i_c_e_s___ */
@@ -269,6 +272,9 @@
       background: url(./image/mainMenu/icon_services.png);
   }
   #services:hover .menu-item-content i{
+      background: url(./image/mainMenu/icon_services_hover.png);
+  }
+  #services a.active i{
       background: url(./image/mainMenu/icon_services_hover.png);
   }
   
@@ -284,6 +290,9 @@
   #clients:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_clients_hover.png);
   }
+  #clients a.active i{
+      background: url(./image/mainMenu/icon_clients_hover.png);
+  }
   
   /* ___p_r_a_c_t_i_c_e____ */
   
@@ -296,6 +305,9 @@
   #practice:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_practice_hover.png);
   }
+  #practice a.active i{
+      background: url(./image/mainMenu/icon_practice_hover.png);
+  }
   
   /* ___c_o_n_t_a_c_t_____ */
   
@@ -306,6 +318,9 @@
       background: url(./image/mainMenu/icon_contact.png);
   }
   #contact:hover .menu-item-content i{
+      background: url(./image/mainMenu/icon_contact_hover.png);
+  }
+  #contact a.active i{
       background: url(./image/mainMenu/icon_contact_hover.png);
   }
   
