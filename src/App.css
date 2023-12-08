@@ -778,6 +778,8 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    position: relative;
+
     
  }
  .contact-form form input,.contact-form form textarea{
@@ -790,9 +792,70 @@
     font-family: 'Voces', cursive;
     margin-bottom: 10px;
     width: 250px;
+
+    position: relative;
     
 
  }
+
+/* .contact-form form input:-webkit-autofill{
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0px 1000px var(--background) inset;
+  
+} */
+
+ 
+ .contact-form-div{
+    position: relative;
+ }
+
+ .errors,.send{
+    left: -185px;
+    position: absolute;
+    background: var(--primarty);
+    padding: 11px 0;
+    font-size: 12px;
+    font-family: 'Voces', cursive;
+    visibility: hidden;
+
+ }
+ .send{
+    background-color: #61911b!important;
+    visibility: hidden;
+    
+ }
+ .formActive{
+    
+    visibility: visible;
+ }
+ .errors>span,.send>span{
+    padding: 0 10px;
+    display: block;
+    width: 154px;
+ }
+ .errors>span::after,.send>span::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: -6px;
+    top: 10px;
+    transform:rotate(270deg);
+    border-bottom: 0;
+    border-top: 15px solid var(--primarty);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    box-sizing: border-box;
+ }
+ .send>span{
+    width: 157px!important;
+ }
+ .send>span::after{
+    border-top: 15px solid #61911b!important;
+
+ }
+ 
+
  .contact-form form button{
     width: 80px;
     height: 35px;
