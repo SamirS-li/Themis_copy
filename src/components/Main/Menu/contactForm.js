@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function ContactForm  (){
+
     const [name,setName]=useState('Your name*');
     const [phone,setPhone]=useState('Your phone*');
     const [email,setEmail]=useState('Your email*');
@@ -211,9 +212,9 @@ export default function ContactForm  (){
                         {send &&<label  className="send formActive"><span>{send}</span></label>}
                          <button onClick={submitForm}  onMouseOver={sendHover} onMouseLeave={sendLeave}>Send</button>
                     </div>
+
                 </form>
             </div>
         )
-    
-  
+   
 }
