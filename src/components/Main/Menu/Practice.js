@@ -1,9 +1,15 @@
 import React from "react";
+import {motion} from "framer-motion"
 import PageTitle from "./PageTitle"
 
 export default function Practice(){
     return(
-        <div id="practice-page">
+        <motion.div 
+        id="practice-page"
+        initial={{ left:"100%", transitionDuration:"0.1s"}}
+        animate={{ left:0 }}
+        exit={{left:"100%" ,transitionDuration:"0.01s"}}
+        >
             <PageTitle pageName='Practice'/>
          <div className="practice-main">
             <div className="practice-header">
@@ -67,6 +73,6 @@ export default function Practice(){
                 </div>
             </div>
           </div>
-        </div>
+        </motion.div>
     )
 }

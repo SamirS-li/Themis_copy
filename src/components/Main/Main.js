@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router,Routes,Route,redirect} from "react-router-dom";
+import { BrowserRouter as Router,Routes,Route,useLocation} from "react-router-dom";
 import MainMenu from './MainMenu';
 import MenuContent from './MenuContent';
 import About from "./Menu/About";
@@ -7,18 +7,20 @@ import Services from "./Menu/Services";
 import Clients from "./Menu/Clients";
 import Practice from "./Menu/Practice";
 import Contact from "./Menu/Contact";
-// import MenuContent from "./MenuContent";
+import { AnimatePresence } from "framer-motion"
 
 
 export default function Main(){
     
-   
+    const location = useLocation();
+    
     
     return(
 
         <div id="Main" >
-            <Router>
-                <Routes>
+            
+            <AnimatePresence>
+                <Routes  location={location} key={location.pathname}>
                 {/* <Route index element={<MainMenu />} /> */}
                 <Route
                         exact
@@ -34,7 +36,8 @@ export default function Main(){
                 </Route>
                 
                 </Routes>
-            </Router>
+            </AnimatePresence>
+            
         </div>
     )
 }

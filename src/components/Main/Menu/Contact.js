@@ -1,10 +1,16 @@
 import React from "react";
+import {motion} from "framer-motion"
 import PageTitle from "./PageTitle";
 import ContactForm from "./contactForm";
 
 export default function Contact(){
     return(
-        <div id="Contact">
+        <motion.div 
+        id="Contact"
+        initial={{ left:"100%", transitionDuration:"0.1s"}}
+        animate={{ left:0 }}
+        exit={{left:"100%" ,transitionDuration:"0.01s"}}
+        >
             <PageTitle pageName="contact-page"/>
             <div className="contact-main">
                 <div className="contact-info">
@@ -38,6 +44,6 @@ export default function Contact(){
                     <ContactForm/>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

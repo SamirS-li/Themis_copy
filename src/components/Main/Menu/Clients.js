@@ -1,9 +1,15 @@
 import React from "react";
+import {motion} from "framer-motion"
 import PageTitle from "./PageTitle"
 
 export default function Clients(){
     return(
-        <div id="clients-page">
+        <motion.div 
+        id="clients-page"
+        initial={{ left:"100%", transitionDuration:"0.1s"}}
+        animate={{ left:0 }}
+        exit={{left:"100%" ,transitionDuration:"0.01s"}}
+        >
             <PageTitle pageName='Clients'/>
             <div className="clients-main">
                 <h4 className="clients-title">Clients testimonials</h4>
@@ -60,6 +66,6 @@ export default function Clients(){
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
