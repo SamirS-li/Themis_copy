@@ -131,6 +131,7 @@
       height: auto;
   }
   .menu-main-div{
+    position: relative;
       margin: 8px 0 30px;
   }
   .menu-list{
@@ -138,6 +139,9 @@
       height: max-content;
       overflow: hidden;
   }
+
+
+
   .menu-list li{
       display: inline-block;
       width: 100%;
@@ -157,6 +161,51 @@
       height: 100%;
       position: relative;
   }
+
+/* === React Slick carousel === */
+.menu-main-div .slick-slider{
+    position: static;
+}
+.menu-main-div .slick-prev, .menu-main-div .slick-next {
+    top: 220px!important;
+    width: 20px!important;
+    height: 24px!important;
+
+
+}
+.menu-main-div .slick-prev{
+    content: ' '!important;
+    position: absolute;
+    left: -40px!important;
+
+    z-index: 10!important;
+    background: url(./image/mainMenu/main_navigation_arrow_left.png)!important;
+
+
+}
+.menu-main-div .slick-next{
+    top: 235px!important;
+    content: ' '!important;
+    right: -40px!important;
+    background: url(./image/mainMenu/main_navigation_arrow_right.png)!important;
+
+}
+.menu-main-div .slick-prev:hover, .menu-main-div .slick-next:hover {
+    background-position: 0 -25px!important;
+
+}
+.menu-main-div .slick-prev::before{
+    display: none!important;
+}
+.menu-main-div .slick-next::before{
+    display: none!important;
+
+}
+.menu-main-div .slick-prev::before:hover{
+    background-position: 0 -15px!important;
+}
+/* === React Slick carousel */
+
   /* ^^^^^^^^^^^^^ ^^ Hoveer ^^ ^^^^^^^^^^^^^^^^^^^ */
   
   .menu-list li:hover{
@@ -209,6 +258,9 @@
   #about:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_about_hover.png);
   }
+  #about  a.active i{
+      background: url(./image/mainMenu/icon_about_hover.png);
+  }
   
   
   /* ____s_e_r_v_i_c_e_s___ */
@@ -220,6 +272,9 @@
       background: url(./image/mainMenu/icon_services.png);
   }
   #services:hover .menu-item-content i{
+      background: url(./image/mainMenu/icon_services_hover.png);
+  }
+  #services a.active i{
       background: url(./image/mainMenu/icon_services_hover.png);
   }
   
@@ -235,6 +290,9 @@
   #clients:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_clients_hover.png);
   }
+  #clients a.active i{
+      background: url(./image/mainMenu/icon_clients_hover.png);
+  }
   
   /* ___p_r_a_c_t_i_c_e____ */
   
@@ -247,6 +305,9 @@
   #practice:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_practice_hover.png);
   }
+  #practice a.active i{
+      background: url(./image/mainMenu/icon_practice_hover.png);
+  }
   
   /* ___c_o_n_t_a_c_t_____ */
   
@@ -257,6 +318,9 @@
       background: url(./image/mainMenu/icon_contact.png);
   }
   #contact:hover .menu-item-content i{
+      background: url(./image/mainMenu/icon_contact_hover.png);
+  }
+  #contact a.active i{
       background: url(./image/mainMenu/icon_contact_hover.png);
   }
   
@@ -319,13 +383,31 @@
       border-bottom: 5px solid var(--secondaryDark);
       padding-bottom:10px ;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       height: 440px;
   }
+
+  .content-close-button{
+    width: 20px;
+    height: 20px;
+    background:url(./image/mainMenu/close_button.png);
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+  }
+  .content-close-button:hover{
+    background-position: 0 -20px;
+  }
+
+  .menu-content-list{position: relative;}
   
   .menu-item-info{
+      overflow: hidden;
       padding-right:8px ;
       width: 668px;
+      transition: all 2s linear;
   }
   
   /* ___________ M e n u  i t e m  i n f o ________  */
@@ -334,6 +416,7 @@
   
   #about-page{
       width: 660px;
+      transition: all 2s linear;
   }
   .about-personal-info{
       display: flex;
@@ -568,13 +651,7 @@
     background-color:var(--secondaryDark);
     cursor: pointer;
   }
-  html{
-    cursor: pointer;
-  }
-  body{
-    cursor: default;
 
-  }
   #clients-page::-webkit-scrollbar-thumb:hover {
     background-color:var(--primarty);
   }
@@ -602,6 +679,220 @@
 
   /* ____^_^_^_ C l i e n t s   e n d _^_^_^___ */
 
+
+  /* ____________ P r a c t i c e ____________  */
+
+
+ #practice-page{
+    overflow-y: scroll;
+    height: 440px;
+   
+ }
+
+ #practice-page::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  
+   
+  #practice-page::-webkit-scrollbar-thumb {
+    background-color:var(--secondaryDark);
+    cursor: pointer;
+  }
+  #practice-page::-webkit-scrollbar-thumb:hover {
+    background-color:var(--primarty);
+  }
+
+ 
+
+ .practice-header-title{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+ }
+
+ .practice-header-info{
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 'Voces', cursive;
+    padding:18px 0 40px;
+ }
+
+ .practice-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+ }
+ .practice-list-item{
+    
+    width: 48%;
+    margin-bottom: 35px;
+ }
+
+
+ .practice-item-title{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding-left: 25px;
+    background-image: url(./image/mainMenu/practice-list-item.png);
+    background-repeat: no-repeat;
+ }
+
+ .practice-item-info{
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 'Voces', cursive;
+    padding-top:15px;
+ }
+
+  /* ____^_^_^_ P r a c t i c e   e n d _^_^_^___ */
+
+
+
+ /*  ___________ C o n t a c t   p a g e _________ */
+
+
+ .contact-main{
+    display: flex;
+ }
+ .contact-info{
+    padding-bottom: 20px;
+    margin-right: 80px;
+ }
+
+ .contact-div-title{
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+ }
+ .contact-info-item{
+    margin-bottom:25px ;
+    padding-left: 20px;
+    border-left: 1px solid var(--primarty);
+ }
+ .contact-info-title{
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 10px;
+ }
+ .contact-info-content>p{
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--secondary);
+    font-family: 'Voces', cursive;
+ }
+
+ .contact-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+
+    
+ }
+ .contact-form form input,.contact-form form textarea{
+    background-color:transparent;
+    border: 1px solid var(--secondaryDark);
+    padding: 10px;
+    color: var(--secondary);
+    outline: 0;
+    font-size: 12px;
+    font-family: 'Voces', cursive;
+    margin-bottom: 10px;
+    width: 250px;
+
+    position: relative;
+    
+
+ }
+
+/* .contact-form form input:-webkit-autofill{
+  -webkit-text-fill-color: var(--white);
+  -webkit-box-shadow: 0 0 0px 1000px var(--background) inset;
+  
+} */
+
+ 
+ .contact-form-div{
+    position: relative;
+ }
+
+ .errors,.send{
+    left: -185px;
+    position: absolute;
+    background: var(--primarty);
+    padding: 11px 0;
+    font-size: 12px;
+    font-family: 'Voces', cursive;
+    visibility: hidden;
+
+ }
+ .send{
+    background-color: #61911b!important;
+    visibility: hidden;
+    
+ }
+ .formActive{
+    
+    visibility: visible;
+ }
+ .errors>span,.send>span{
+    padding: 0 10px;
+    display: block;
+    width: 154px;
+ }
+ .errors>span::after,.send>span::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: -6px;
+    top: 10px;
+    transform:rotate(270deg);
+    border-bottom: 0;
+    border-top: 15px solid var(--primarty);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    box-sizing: border-box;
+ }
+ .send>span{
+    width: 157px!important;
+ }
+ .send>span::after{
+    border-top: 15px solid #61911b!important;
+
+ }
+ 
+
+ .contact-form form button{
+    width: 80px;
+    height: 35px;
+    border: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Voces', cursive;
+    color: var(--white);
+    background: url('./image/mainMenu/button.png');
+    cursor:pointer;
+
+ }
+ .contact-form form button:hover{
+   background-position: 0 -35px;
+ }
+
+
+  /* ____^_^_^_ C o n t a c t   e n d _^_^_^___ */
+
+
+
+
   
 
   
@@ -610,6 +901,7 @@
   
   
   /* ___________ menu content l i s t ________  */
+
   .menu-content-slider{
       width: 100%;
       max-width: 320px;
@@ -622,6 +914,16 @@
   .menu-content-slider .menu-list li:hover a{
       border-left-color:var(--primarty);
   }
+
+  /* React router */
+  .menu-content-slider .menu-list a.active{
+    border-left:2px solid var(--primarty)!important;
+  }
+  .menu-content-slider .menu-list li:has(> a.active){
+    border-left:1px solid var(--primarty)!important;
+  }
+  
+/* React router */
   
   /* slider */
   .menu-content-slider .menu-list{
@@ -632,7 +934,7 @@
   .menu-content-slider .menu-list li{
       max-width: 350px;
       width: 320px;
-      height: 88px;
+      height: 87.9px;
       box-sizing: border-box;
       margin-right: 10px;
       border-left: 1px solid var(--secondaryDark);
@@ -776,7 +1078,7 @@
   .slick-prev{
       content: ' '!important;
       left: 282px!important;
-      z-index: 10!important;
+      z-index: 0!important;
       background: url(./image/icon_navbar_up.png)!important;
   
   
@@ -793,24 +1095,9 @@
   }
   .slick-prev::before{
       display: none!important;
-      /* width: 15px!important;
-      height: 15px!important;
-      position: absolute!important;
-      content: ' '!important;
-      background: red!important;
-      top: 0px!important;
-      left: 0px!important; */
   }
   .slick-next::before{
       display: none!important;
-      /* width: 15px!important;
-      height: 15px!important;
-      position: absolute!important;
-      content: ''!important;
-      background: red!important;
-      top: 0px!important;
-      right: 0px!important;
-      background-position: 0 0px!important; */
   
   }
   .slick-prev::before:hover{
