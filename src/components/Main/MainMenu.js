@@ -155,15 +155,12 @@ export default class MainMenu extends React.Component{
                                 </div>
                             </Link>
                         </motion.li>
-
-
-                        
                         <motion.li id="about"
-                        initial={{height:"450px",transitionDuration:"2s"}}
-                        animate={{ }}
-                        exit={{height:0,transitionDuration:"0.5s"}}
+                        initial={{height:"450px",left:"792px",zIndex:1,transitionDuration:"0.7s",transitionDelay:"0.8s"}}
+                        animate={{ left:0}}
+                        exit={{height:0,transitionDuration:"0.8s",transitionDelay:0}}
                         >
-                            <Link to="/menuContent/about">
+                            <Link to="/menuContent/about" onClick={mainListAddClass}>
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -180,11 +177,11 @@ export default class MainMenu extends React.Component{
                             </Link>
                         </motion.li>
                         <motion.li id="services"
-                        initial={{height:"450px",transitionDuration:"2s"}}
-                        animate={{ }}
-                        exit={{height:0,transitionDuration:"0.8s"}}
+                        initial={{height:"450px",left:"594px",zIndex:2,transitionDuration:"0.7s",transitionDelay:"0.8s"}}
+                        animate={{ left:0 }}
+                        exit={{height:0,transitionDuration:"0.5s",transitionDelay:0}}
                         >
-                            <Link to="/menuContent/services" >
+                            <Link to="/menuContent/services" onClick={mainListAddClass}>
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -201,11 +198,11 @@ export default class MainMenu extends React.Component{
                             </Link>
                         </motion.li>
                         <motion.li id="clients"
-                        initial={{height:"450px",transitionDuration:"2s"}}
-                        animate={{ }}
-                        exit={{height:0,transitionDuration:"0.3s"}}
+                        initial={{height:"450px",left:"396px",zIndex:3,transitionDuration:"0.7s",transitionDelay:"0.8s"}}
+                        animate={{ left:0}}
+                        exit={{height:0,transitionDuration:"0.3s",transitionDelay:0}}
                         >
-                            <Link to="/menuContent/clients" >
+                            <Link to="/menuContent/clients" onClick={mainListAddClass}>
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -222,11 +219,11 @@ export default class MainMenu extends React.Component{
                             </Link>
                         </motion.li>
                         <motion.li id="practice"
-                        initial={{height:"450px",transitionDuration:"2s"}}
-                        animate={{ }}
-                        exit={{height:0,transitionDuration:"0.7s"}}
+                        initial={{height:"450px",left:"198px",zIndex:4,transitionDuration:"0.7s",transitionDelay:"0.8s"}}
+                        animate={{ left:0 }}
+                        exit={{height:0,transitionDuration:"0.4s",transitionDelay:0}}
                         >
-                            <Link to="/menuContent/practice" >
+                            <Link to="/menuContent/practice" onClick={mainListAddClass}>
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
@@ -243,11 +240,11 @@ export default class MainMenu extends React.Component{
                             </Link>
                         </motion.li>
                         <motion.li id="contact"
-                        initial={{height:"450px",transitionDuration:"2s"}}
-                        animate={{height:"450px",transitionDuration:"1s"}}
+                        initial={{zIndex:5}}
+                        animate={{}}
                         exit={{height:0,transitionDuration:"0.5s"}}
                         >
-                            <Link to="/menuContent/contact" >
+                            <Link to="/menuContent/contact" onClick={mainListAddClass}>
                                 <div className="img-container">
                                     <div className="menu_img_item">
                                     </div>
