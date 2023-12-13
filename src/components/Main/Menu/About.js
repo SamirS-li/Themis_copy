@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import {motion} from "framer-motion"
 
 import PageTitle from "./PageTitle";
 
@@ -21,9 +22,7 @@ export default class About extends React.Component {
   
 
     componentDidMount() {
-        // document.addEventListener('click',(e)=>{
-        //     console.log('e target:',e.target.type=='button')
-        // })
+        
 
         let imgList2 = document.querySelector('.img-list2');
         let imgList1 = document.querySelector('.img-list1');
@@ -69,7 +68,12 @@ export default class About extends React.Component {
     
 
         return(
-        <div id="about-page">
+        <motion.div 
+        id="about-page"
+        initial={{ left:"103%", transitionDuration:"0.1s"}}
+        animate={{ left:0 }}
+        exit={{left:"100%" ,transitionDuration:"0.01s"}}
+        >
            <PageTitle pageName="About"/>
 
             <div className="about-main">
@@ -122,7 +126,7 @@ export default class About extends React.Component {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
          )
     }
 }

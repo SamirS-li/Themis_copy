@@ -30,8 +30,9 @@
       color: var(--white);
   
   }
+  
   .container{
-      width: 990px;
+      width: 1070px;
       margin: 0 auto;
   }
   
@@ -46,7 +47,7 @@
 
   /* ------- Header start -------- */
   #Header{
-      padding: 10px 0;
+      padding: 10px 40px;
       border-bottom:5px solid #5d514b;
   }
   .header-container{
@@ -121,18 +122,35 @@
   
   
   /* ------- Main start --------- */
-  #main{
-      margin-bottom: 30px;
+  #Main{
+      height: 490px;
+      overflow: hidden;
+      display: flex;
+      padding: 0 40px;
+      position: relative;
+      
+      
+      
   }
   
   /* --------- Main Menu start ------ */
   #MainMenu{
       width: 100%;
       height: auto;
+      float: right;
   }
   .menu-main-div{
-    position: relative;
       margin: 8px 0 30px;
+  }
+
+  .List-animation li{
+    animation-name: liLefting;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+  }
+  @keyframes liLefting{
+    0%{left: 0;}
+    100%{left: 500px;opacity: 0;}
   }
   .menu-list{
       width: 100%;
@@ -143,7 +161,7 @@
 
 
   .menu-list li{
-      display: inline-block;
+    display: inline-block;
       width: 100%;
       max-width: 190px;
       height: 450px;
@@ -151,7 +169,38 @@
       margin-right: 10px;
       border-bottom: 5px solid var(--secondaryDark);
       overflow: hidden;
+      position: relative;
   }
+  .menu-list li:not(.List-animation li){
+    animation-name: hidden_Li;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+  }
+  @keyframes hidden_Li{
+    0%{}
+    100%{opacity: 1;}
+  }
+
+  .menu-list #contact:not(.List-animation #contact){
+    animation-name: contactAnimation;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    height: 0;
+    z-index: 5;
+    opacity: 1;
+  }
+
+  @keyframes contactAnimation{
+    0%{}
+    100%{height: 450px;}
+  }
+
+/* height:0,zIndex:5,transitionDuration:"2s" */
+/* height:"450px",transitionDuration:"0.5s" */
+
   .menu-list li:nth-child(5n){
       margin-right: 0;
      
@@ -160,6 +209,7 @@
       display: block;
       height: 100%;
       position: relative;
+      background-color: var(--background);
   }
 
 /* === React Slick carousel === */
@@ -176,8 +226,7 @@
 .menu-main-div .slick-prev{
     content: ' '!important;
     position: absolute;
-    left: -40px!important;
-
+    left: -4px!important;
     z-index: 10!important;
     background: url(./image/mainMenu/main_navigation_arrow_left.png)!important;
 
@@ -186,7 +235,7 @@
 .menu-main-div .slick-next{
     top: 235px!important;
     content: ' '!important;
-    right: -40px!important;
+    right: 0px!important;
     background: url(./image/mainMenu/main_navigation_arrow_right.png)!important;
 
 }
@@ -232,7 +281,7 @@
       position: relative;
       top: -63px;
       height: 188px;
-      transition: all .25s linear;
+      /* transition: all .25s linear; */
   }
   
   
@@ -244,7 +293,7 @@
       width: 100%;
       
       transform:skewY(33deg);
-      transition: all .5s ease-in-out;
+      /* transition: all .5s ease-in-out; */
   
   }
   /* ____a_b_o_u_t______ */
@@ -274,9 +323,7 @@
   #services:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_services_hover.png);
   }
-  #services a.active i{
-      background: url(./image/mainMenu/icon_services_hover.png);
-  }
+  
   
   
   /* ___c_l_i_e_n_t_s_____ */
@@ -290,9 +337,7 @@
   #clients:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_clients_hover.png);
   }
-  #clients a.active i{
-      background: url(./image/mainMenu/icon_clients_hover.png);
-  }
+ 
   
   /* ___p_r_a_c_t_i_c_e____ */
   
@@ -320,9 +365,7 @@
   #contact:hover .menu-item-content i{
       background: url(./image/mainMenu/icon_contact_hover.png);
   }
-  #contact a.active i{
-      background: url(./image/mainMenu/icon_contact_hover.png);
-  }
+  
   
   /* ____^_^_^_^_^_^_^_^_^_^_^_^_^_^_^____ */
   
@@ -356,7 +399,7 @@
       display: block;
       width: 40px;
       height: 40px;
-      transition: all .2s linear;
+      /* transition: all .2s linear; */
   }
   .menu-item-content h2{
       line-height: 1;
@@ -377,15 +420,32 @@
   
   #MenuContent{
       margin: 10px 0 25px;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+
+  }
+  #MenuContent:nth-child(2){
+      margin: 10px 0 25px;
+      position: relative;
   }
   
   .menu-content-main{
       border-bottom: 5px solid var(--secondaryDark);
       padding-bottom:10px ;
       display: flex;
-      justify-content: flex-end;
+      /* justify-content: flex-end; */
       height: 440px;
+      float: right;
+      animation-name: Menu_content;
+      animation-duration: 2s;
+
   }
+
+  /* @keyframes Menu_content{
+    0%{width: 30%;}
+    100%{width:100%}
+  } */
 
   .content-close-button{
     width: 20px;
@@ -407,8 +467,9 @@
       overflow: hidden;
       padding-right:8px ;
       width: 668px;
-      transition: all 2s linear;
+      /* transition: all 2s linear; */
   }
+  
   
   /* ___________ M e n u  i t e m  i n f o ________  */
   
@@ -416,7 +477,8 @@
   
   #about-page{
       width: 660px;
-      transition: all 2s linear;
+      /* transition: all 2s linear; */
+      position: relative;
   }
   .about-personal-info{
       display: flex;
@@ -587,7 +649,9 @@
 
   /* __________ S e r v i c e s  p a g e _______ */
 
-
+ #services-page{
+    position: relative;
+ }
   .services-section{
     display: flex;
     margin-bottom: 20px;
@@ -622,6 +686,8 @@
  /*  ___________ C l e n t s  p a g e _________ */
   #clients-page{
     overflow-y:scroll ;
+    position: relative;
+
 
   }
 
@@ -686,6 +752,7 @@
  #practice-page{
     overflow-y: scroll;
     height: 440px;
+    position: relative;
    
  }
 
@@ -754,7 +821,10 @@
 
 
  /*  ___________ C o n t a c t   p a g e _________ */
+ #Contact{
+    position: relative;
 
+ }
 
  .contact-main{
     display: flex;
@@ -813,11 +883,7 @@
 
  }
 
-/* .contact-form form input:-webkit-autofill{
-  -webkit-text-fill-color: var(--white);
-  -webkit-box-shadow: 0 0 0px 1000px var(--background) inset;
-  
-} */
+
 
  
  .contact-form-div{
@@ -904,7 +970,7 @@
 
   .menu-content-slider{
       width: 100%;
-      max-width: 320px;
+      max-width: 314px;
   }
   /* ^^^^ hover ^^^^ */
   
@@ -1012,6 +1078,80 @@
   /* === React Slick carousel */
   
   
+/* about */
+
+#about-list .menu_img_item{
+    background-image: url(./image/mainMenu/about_img.jpg);
+}
+#about-list .menu-item-content i{
+    background: url(./image/mainMenu/icon_about.png);
+}
+#about-list:hover .menu-item-content i{
+    background: url(./image/mainMenu/icon_about_hover.png);
+}
+#about-list  a.active i{
+    background: url(./image/mainMenu/icon_about_hover.png);
+}
+
+/* services */
+
+#services-list .menu_img_item{
+    background-image: url(./image/mainMenu/services_img.jpg);
+}
+#services-list .menu-item-content i{
+    background: url(./image/mainMenu/icon_services.png);
+}
+#services-list:hover .menu-item-content i{
+    background: url(./image/mainMenu/icon_services_hover.png);
+}
+#services-list a.active i{
+    background: url(./image/mainMenu/icon_services_hover.png);
+}
+
+/* clients */
+
+
+#clients-list .menu_img_item{
+    background-image: url(./image/mainMenu/clients_img.jpg);
+}
+#clients-list .menu-item-content i{
+    background: url(./image/mainMenu/icon_clients.png);
+}
+#clients-list:hover .menu-item-content i{
+    background: url(./image/mainMenu/icon_clients_hover.png);
+}
+#clients-list a.active i{
+    background: url(./image/mainMenu/icon_clients_hover.png);
+}
+
+/* practice */
+
+#practice-list .menu_img_item{
+    background-image: url(./image/mainMenu/practice_img.jpg);
+}
+#practice-list .menu-item-content i{
+    background: url(./image/mainMenu/icon_practice.png);
+}
+#practice-list:hover .menu-item-content i{
+    background: url(./image/mainMenu/icon_practice_hover.png);
+}
+#practice-list a.active i{
+    background: url(./image/mainMenu/icon_practice_hover.png);
+}
+/* contact */
+#contact-list .menu_img_item{
+    background-image: url(./image/mainMenu/contact_img.jpg);
+}
+#contact-list .menu-item-content i{
+    background: url(./image/mainMenu/icon_contact.png);
+}
+#contact-list:hover .menu-item-content i{
+    background: url(./image/mainMenu/icon_contact_hover.png);
+}
+#contact-list a.active i{
+    background: url(./image/mainMenu/icon_contact_hover.png);
+}
+  
   /* ____^__^__^___ l i s t ___^__^__^____  */
   /* ____ __ __ ___         ___ __ __ ____  */
   
@@ -1026,6 +1166,7 @@
   /* ------ Footer start -------- */
   #footer{
       margin-bottom: 50px;
+      padding: 0 40px; 
   }
   .footer-container{
       display: flex;
@@ -1214,7 +1355,7 @@
       font-size: 12px;
       font-family: 'Voces', cursive;
       line-height: 19.5px;
-      padding: 15px 0 15px 0;
+      padding: 15px 40px 15px;
       border-top: 1px solid #3a322f;
       outline: 1px solid #241F1D;
   }

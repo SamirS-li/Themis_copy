@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from "framer-motion"
 import PageTitle from "./PageTitle";
 import img_1 from '../../../image/mainMenu/services-page/services_img1.jpg'
 import img2_2 from '../../../image/mainMenu/services-page/services_img2.jpg'
@@ -7,7 +8,12 @@ import img3_3 from '../../../image/mainMenu/services-page/services_img3.jpg'
 
 export default function Services(){
     return(
-        <div id="services-page">
+        <motion.div 
+        id="services-page"
+        initial={{ left:"100%", transitionDuration:"0.1s"}}
+        animate={{ left:0 }}
+        exit={{left:"100%" ,transitionDuration:"0.1s"}}
+        >
             <PageTitle pageName="Services"/>
             <div className="services-main">
                 <div className="services-section">
@@ -39,6 +45,6 @@ export default function Services(){
                 </div>
             </div>
     
-        </div>
+        </motion.div>
     )
 }
