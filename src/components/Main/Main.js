@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router,Routes,Route,useLocation} from "react-router-dom";
 import MainMenu from './MainMenu';
 import MenuContent from './MenuContent';
@@ -9,16 +9,23 @@ import Practice from "./Menu/Practice";
 import Contact from "./Menu/Contact";
 import { AnimatePresence } from "framer-motion"
 
+   export const animationContext = React.createContext('')
 
 export default function Main(){
     
     const location = useLocation();
     
+    const[animationClick,setAnimation] = useState('ttt');
+    
+    const [value, setValue] = useState(false);
+    
+    console.log('context Main : ',value)
+    
     
     return(
 
         <div id="Main" >
-            
+          <animationContext.Provider value={{value,setValue}}>
             <AnimatePresence>
                 <Routes  location={location} key={location.pathname}>
                 {/* <Route index element={<MainMenu />} /> */}
@@ -37,6 +44,7 @@ export default function Main(){
                 
                 </Routes>
             </AnimatePresence>
+          </animationContext.Provider>
             
         </div>
     )
