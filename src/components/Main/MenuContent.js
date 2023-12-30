@@ -1,41 +1,66 @@
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 import Slider from "react-slick";
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
-import {Routes,Route,NavLink} from "react-router-dom"
+import {Routes,Route,NavLink, useLocation, useRoutes, useNavigate} from "react-router-dom"
 import {motion} from "framer-motion"
 import About from "./Menu/About";
 import Services from "./Menu/Services";
-
 import Clients from "./Menu/Clients";
 import Contact from "./Menu/Contact";
 import Practice from "./Menu/Practice";
+import {animationContext} from '../Main/Main'
 
 
-export default class MenuContent extends React.Component {
+
+export default function MenuContent (){
+   
+          const {value,setValue} = useContext(animationContext)
+          const [animationValue,setAnimation] = useState(value)
+          console.log('animation value: ', animationValue)
+
     
-    render() {
         const settings = {
           dots: false,
-          infinite: true,
+          infinite: true,   
           speed: 600,
           slidesToShow: 5,
           slidesToScroll: 1,
           vertical:true,
         };
+        const removeAnimation = ()=>{
+            
+            setAnimation(false);
+            
+            // console.log(document.querySelector('.menu-content-main').classList)
+            document.querySelector('.menu-content-main').classList.remove('animation-item')
+            // console.log(document.querySelector('.menu-content-main').classList)
+        }
+        useEffect(()=>{
+            if(value){
+                console.log('if in ici',value)
+                document.querySelector('.menu-content-main').classList.add('animation-item')
+                setValue(false)
+                setTimeout(()=>{
+                    
+                })
+
+            }
+            
+        })
         
         
         
     return(
 
         
-             <div 
-             id="MenuContent">
+             <div id="MenuContent">
                  <motion.div 
-                 className="menu-content-container"
-            //      initial={{ width:"32%",height:0,transitionDuration:"2s"}}
-            //  animate={{ width:"100%",height:"100%" }}
-            //  exit={{width:"32%",height:0 , transitionDuration:"10s"}}
+                  className="menu-content-container"
+                  initial={{ }}
+                  animate={{}}
+                  exit={{height:"0",transitionDelay:3,delay:"3s"}}
+                  
                  >
                      <div className="menu-content-main">
 
@@ -74,10 +99,10 @@ export default class MenuContent extends React.Component {
                           </Routes>
                         </div>
                          <div className="menu-content-list">
-                            <NavLink to='/' className="content-close-button"></NavLink>
+                            <NavLink to='/' className="content-close-button" onClick={removeAnimation}></NavLink>
                           <div className="menu-content-slider">
-                             <Slider {...settings} className="menu-list">
-                             <li id="about-list">
+                             <Slider {...settings} className="menu-small-list">
+                             <li onClick={removeAnimation} id="about-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/about">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -88,7 +113,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </NavLink>
                              </li>
-                             <li id="services-list">
+                             <li onClick={removeAnimation} id="services-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/services">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -102,7 +127,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </NavLink>
                              </li>
-                             <li id="clients-list">
+                             <li onClick={removeAnimation} id="clients-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/clients" >
                                      <div className="menu-item-content">
                                              <i></i>
@@ -113,7 +138,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </NavLink>
                              </li>
-                             <li id="practice-list">
+                             <li onClick={removeAnimation} id="practice-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/practice">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -124,7 +149,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </NavLink>
                              </li>
-                             <li id="contact-list">
+                             <li onClick={removeAnimation} id="contact-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/contact">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -135,8 +160,7 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </NavLink>
                              </li>
-                             <li id="about-list">
-
+                             <li onClick={removeAnimation} id="about-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/about">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -145,12 +169,10 @@ export default class MenuContent extends React.Component {
                                                  <span>mark antony</span>
                                              </div>
                                      </div>
-
                                  </NavLink>
                              </li>
-                             <li id="services-list">
+                             <li onClick={removeAnimation} id="services-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/services">
-
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -159,14 +181,12 @@ export default class MenuContent extends React.Component {
                                                  <span>Legal Services</span>
 
 
-
                                              </div>
                                      </div>
                                  </NavLink>
                              </li>
-                             <li id="clients-list">
-                                 <NavLink activeClassName="activeList-a" to="/menuContent/clients">
-
+                             <li onClick={removeAnimation} id="clients-list">
+                                 <NavLink activeClassName="activeList-a" to="/menuContent/clients" >
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -174,10 +194,9 @@ export default class MenuContent extends React.Component {
                                                  <span>Testimonials</span>
                                              </div>
                                      </div>
-
                                  </NavLink>
                              </li>
-                             <li id="practice-list">
+                             <li onClick={removeAnimation} id="practice-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/practice">
                                      <div className="menu-item-content">
                                              <i></i>
@@ -188,9 +207,8 @@ export default class MenuContent extends React.Component {
                                      </div>
                                  </NavLink>
                              </li>
-                             <li id="contact-list">
+                             <li onClick={removeAnimation} id="contact-list">
                                  <NavLink activeClassName="activeList-a" to="/menuContent/contact">
-
                                      <div className="menu-item-content">
                                              <i></i>
                                              <div>
@@ -198,7 +216,6 @@ export default class MenuContent extends React.Component {
                                                  <span>Get In Touch</span>
                                              </div>
                                      </div>
-
                                  </NavLink>
                              </li>
                             
@@ -214,5 +231,5 @@ export default class MenuContent extends React.Component {
              </div>
         
       )
-    }
+    
 }

@@ -1,25 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {motion} from "framer-motion"
 import Slider from "react-slick";
+import {animationContext} from '../Main/Main'
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
 
 
 
-export default class MainMenu extends React.Component{
+export default function MainMenu (){
 
-    // componentDidMount(){
-    //     const mainListAddClass = document.querySelector('.menu-list')
-
-    //     mainListAddClass.addEventListener('click',(e)=>{
-    //             mainListAddClass.classList.add('List-animation');
-    //             console.log(e.target)
-    //             console.log('==== click ====')
-    //         })
-            
-    // }
-    render(){
+        const {setValue} = useContext(animationContext)
+    
         const settings = {
             dots: false,
             infinite: true,
@@ -34,8 +26,12 @@ export default class MainMenu extends React.Component{
             const mainList = document.querySelector('.menu-list')
             console.log('mainlist : ',mainList)
             mainList.classList.add('List-animation')
-          }
 
+            // --------------Aniamation--------------------
+            setValue(true)
+
+          }
+          
           
     
     return(
@@ -269,5 +265,5 @@ export default class MainMenu extends React.Component{
             </div>
         </motion.div>
     )
-  }
+  
 }
