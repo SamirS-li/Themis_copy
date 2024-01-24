@@ -126,8 +126,8 @@ export default function Footer() {
         <div className="footer-news">
           <div className="footer-title">Latest news</div>
           <div className="footer-news-main">
-            <a className="carousel-prev" onClick={increase}></a>
-            <a className="carousel-next" onClick={decrease}></a>
+            <i className="carousel-prev" onClick={increase}></i>
+            <i className="carousel-next" onClick={decrease}></i>
             <ul
               className="news-list carousel"
               style={{ top: minSize }}
@@ -195,34 +195,34 @@ export default function Footer() {
           <div className="legal-main">
             <ul className="legal-list">
               <li>
-                <a href="#">Business Law</a>
+                <a href="aa">Business Law</a>
               </li>
               <li>
-                <a href="#">Consumer</a>
+                <a href="aa">Consumer</a>
               </li>
               <li>
-                <a href="#">Criminal Law</a>
+                <a href="aa">Criminal Law</a>
               </li>
               <li>
-                <a href="#">Child Custody</a>
+                <a href="aa">Child Custody</a>
               </li>
               <li>
-                <a href="#">Civil Rights</a>
+                <a href="aa">Civil Rights</a>
               </li>
               <li>
-                <a href="#">Bankrupcty</a>
+                <a href="aa">Bankrupcty</a>
               </li>
               <li>
-                <a href="#">Education</a>
+                <a href="aa">Education</a>
               </li>
               <li>
-                <a href="#">Car Accidents</a>
+                <a href="aa">Car Accidents</a>
               </li>
               <li>
-                <a href="#">Divorce</a>
+                <a href="aa">Divorce</a>
               </li>
               <li>
-                <a href="#">Discrimination</a>
+                <a href="aa">Discrimination</a>
               </li>
             </ul>
           </div>

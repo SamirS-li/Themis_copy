@@ -57,18 +57,18 @@ export default class About extends React.Component {
             <div className="about-image">
               <Slider {...settings} className="about-img-list img-list1">
                 <li>
-                  <a href="">
-                    <img src={img1} alt="" />
+                  <a href="aa">
+                    <img src={img1} alt="aa" />
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <img src={img2} alt="" />
+                  <a href="aa">
+                    <img src={img2} alt="aa" />
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <img src={img3} alt="" />
+                  <a href="aa">
+                    <img src={img3} alt="aa" />
                   </a>
                 </li>
               </Slider>
@@ -79,18 +79,18 @@ export default class About extends React.Component {
                 className="about-img-list img-list2"
               >
                 <li>
-                  <a href="">
-                    <img src={img1_2} alt="" />
+                  <a href="aa">
+                    <img src={img1_2} alt="aa" />
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <img src={img2_2} alt="" />
+                  <a href="aa">
+                    <img src={img2_2} alt="aa" />
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <img src={img3_2} alt="" />
+                  <a href="aa">
+                    <img src={img3_2} alt="aa" />
                   </a>
                 </li>
               </Slider>
@@ -105,31 +105,31 @@ export default class About extends React.Component {
               </p>
               <ul class="legal-list">
                 <li>
-                  <a href="#">Business Law</a>
+                  <a href="aa">Business Law</a>
                 </li>
                 <li>
-                  <a href="#">Consumer</a>
+                  <a href="aa">Consumer</a>
                 </li>
                 <li>
-                  <a href="#">Criminal Law</a>
+                  <a href="aa">Criminal Law</a>
                 </li>
                 <li>
-                  <a href="#">Child Custody</a>
+                  <a href="aa">Child Custody</a>
                 </li>
                 <li>
-                  <a href="#">Civil Rights</a>
+                  <a href="aa">Civil Rights</a>
                 </li>
                 <li>
-                  <a href="#">Bankrupcty</a>
+                  <a href="aa">Bankrupcty</a>
                 </li>
                 <li>
-                  <a href="#">Education</a>
+                  <a href="aa">Education</a>
                 </li>
                 <li>
-                  <a href="#">Divorce</a>
+                  <a href="aa">Divorce</a>
                 </li>
                 <li>
-                  <a href="#">Discrimination</a>
+                  <a href="aa">Discrimination</a>
                 </li>
               </ul>
             </div>
