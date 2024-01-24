@@ -2,6 +2,7 @@
 import Testimonials from "./Testimonial";
 
 export default function Footer() {
+
   // const [minSize, setMinSize] = useState();
   // const [maxSize, setMaxSize] = useState(0);
 
@@ -126,6 +127,7 @@ export default function Footer() {
   //       : (CarouselStyle.current.style.top = setwillSize);
   //   }, intervalCount);
   // }
+
 
   return (
     <div id="footer">
