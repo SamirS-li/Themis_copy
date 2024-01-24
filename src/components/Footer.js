@@ -4,7 +4,7 @@ import Testimonials from "./Testimonial";
 export default function Footer() {
   const [minSize, setMinSize] = useState();
   const [maxSize, setMaxSize] = useState(0);
-  const [intervalCount, setIntervalTime] = useState("40");
+  const intervalCount = 40;
   const [worked, setWorked] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Footer() {
 
     // Call VerticalEndSize
 
-    if (carousel.lastChild.className != "clone") {
+    if (carousel.lastChild.className !== "clone") {
       setTimeout(() => {
         VerticalEndSize();
       }, 100);
@@ -55,7 +55,7 @@ export default function Footer() {
 
     // Add copy child into carousel
 
-    if (carousel.lastChild.className != "clone") {
+    if (carousel.lastChild.className !== "clone") {
       setTimeout(() => {
         carousel.childNodes.forEach((item) => {
           let element = item.cloneNode(true);
@@ -68,7 +68,7 @@ export default function Footer() {
     //  Carousel auto playing function
 
     function carouselAutoplay() {
-      if (worked != true) {
+      if (worked !== true) {
         setInterval(() => {
           nextArrow.click();
         }, 4000);

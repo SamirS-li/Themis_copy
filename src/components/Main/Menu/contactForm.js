@@ -21,7 +21,7 @@ export default function ContactForm() {
   };
 
   const clearInput = (e) => {
-    if (e.target.value == "Your " + e.target.name + "*") {
+    if (e.target.value === "Your " + e.target.name + "*") {
       e.target.value = "";
     }
   };
@@ -91,7 +91,7 @@ export default function ContactForm() {
 
   // Adding visibilty class to send button on hover after form submitting successful
   const sendHover = () => {
-    if (send && Object.keys(errors).length == 0) {
+    if (send && Object.keys(errors).length === 0) {
       let sendClasslist = document.querySelector(".send").classList;
       formAddActive(sendClasslist);
     }
@@ -131,8 +131,8 @@ export default function ContactForm() {
 
     if (send) {
       if (
-        e.target.value == "Your " + e.target.name + "*" ||
-        e.target.value == ""
+        e.target.value === "Your " + e.target.name + "*" ||
+        e.target.value === ""
       ) {
         setErrors(validationErrors);
 
