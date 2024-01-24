@@ -32,7 +32,7 @@ export default function Main() {
   // }, [path]);
 
   window.onload = ()=>{
-    navigate("/mainMenu");
+    navigate("/");
   }
 
 
@@ -42,7 +42,7 @@ export default function Main() {
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
             {/* <Route index element={<MainMenu />} /> */}
-            <Route exact path="/mainMenu" element={<MainMenu />} />
+            <Route exact path="/" element={<MainMenu />} />
             <Route path="/menuContent/*" element={<MenuContent />}>
               <Route path="/menuContent/*about" element={<About />} />
               <Route path="/menuContent/*services" element={<Services />} />
