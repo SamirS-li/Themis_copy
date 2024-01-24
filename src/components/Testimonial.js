@@ -17,8 +17,10 @@ export default class SimpleSlider extends React.Component {
       <div className="footer-testimonials">
         <div className="footer-title">Testimonials</div>
         <div className="footer-testimonials-main">
-          <a className="carousel-prev" href="#"></a>
-          <a className="carousel-next" href="#"></a>
+
+          {/* <i className="carousel-prev"></i>
+          <a className="carousel-next" href="#"></a> */}
+
           <Slider {...settings} className="testimonials-list Carousel">
             <li>
               <div className="testimonials-list-content">
