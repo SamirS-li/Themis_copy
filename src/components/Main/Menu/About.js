@@ -57,6 +57,7 @@ export default class About extends React.Component {
             <div className="about-image">
               <Slider {...settings} className="about-img-list img-list1">
                 <li>
+
                   <a href="aa">
                     <img src={img1} alt="aa" />
                   </a>
@@ -69,6 +70,7 @@ export default class About extends React.Component {
                 <li>
                   <a href="aa">
                     <img src={img3} alt="aa" />
+
                   </a>
                 </li>
               </Slider>
@@ -79,6 +81,7 @@ export default class About extends React.Component {
                 className="about-img-list img-list2"
               >
                 <li>
+
                   <a href="aa">
                     <img src={img1_2} alt="aa" />
                   </a>
@@ -91,6 +94,7 @@ export default class About extends React.Component {
                 <li>
                   <a href="aa">
                     <img src={img3_2} alt="aa" />
+
                   </a>
                 </li>
               </Slider>
@@ -105,6 +109,7 @@ export default class About extends React.Component {
               </p>
               <ul class="legal-list">
                 <li>
+
                   <a href="aa">Business Law</a>
                 </li>
                 <li>
@@ -130,6 +135,7 @@ export default class About extends React.Component {
                 </li>
                 <li>
                   <a href="aa">Discrimination</a>
+
                 </li>
               </ul>
             </div>

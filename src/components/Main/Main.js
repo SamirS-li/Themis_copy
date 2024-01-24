@@ -1,4 +1,6 @@
+
 import React, { useState} from "react";
+
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import MainMenu from "./MainMenu";
 import MenuContent from "./MenuContent";
@@ -10,15 +12,18 @@ import Contact from "./Menu/Contact";
 import { AnimatePresence } from "framer-motion";
 
 export const animationContext = React.createContext("");
+
 // let path;
 
 // window.addEventListener("DOMContentLoaded", () => {
 //   path = "/";
 // });
 
+
 export default function Main() {
   const location = useLocation();
   const navigate = useNavigate();
+
   // path=location.pathname;
   const [value, setValue] = useState(false);
 
@@ -29,6 +34,7 @@ export default function Main() {
   window.onload = ()=>{
     navigate("/");
   }
+
 
   return (
     <div id="Main">
