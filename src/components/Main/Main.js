@@ -1,7 +1,7 @@
 
 import React, { useState} from "react";
 
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate} from "react-router-dom";
 import MainMenu from "./MainMenu";
 import MenuContent from "./MenuContent";
 import About from "./Menu/About";
@@ -32,7 +32,7 @@ export default function Main() {
   // }, [path]);
 
   window.onload = ()=>{
-    navigate("/");
+    navigate("/mainMenu");
   }
 
 
@@ -42,7 +42,7 @@ export default function Main() {
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
             {/* <Route index element={<MainMenu />} /> */}
-            <Route exact path="/" element={<MainMenu />} />
+            <Route exact path="/mainMenu" element={<MainMenu />} />
             <Route path="/menuContent/*" element={<MenuContent />}>
               <Route path="/menuContent/*about" element={<About />} />
               <Route path="/menuContent/*services" element={<Services />} />

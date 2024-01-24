@@ -70,7 +70,7 @@ export default function MenuContent() {
           </div>
           <div className="menu-content-list">
             <NavLink
-              to="/"
+              to="/mainMenu"
               className="content-close-button"
               onClick={removeAnimation}
             ></NavLink>
