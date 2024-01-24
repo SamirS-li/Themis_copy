@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import MainMenu from "./MainMenu";
 import MenuContent from "./MenuContent";
 import About from "./Menu/About";
@@ -20,8 +14,6 @@ let path;
 
 window.addEventListener("DOMContentLoaded", () => {
   path = "/";
-  
-  
 });
 
 export default function Main() {
@@ -32,10 +24,7 @@ export default function Main() {
 
   useEffect(() => {
     navigate(path);
-    console.log("useEffect Main",path);
   }, [path]);
-
-
 
   return (
     <div id="Main">

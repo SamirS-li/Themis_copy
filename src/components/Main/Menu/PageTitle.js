@@ -1,9 +1,5 @@
 import React from "react";
 
-
-export default  function PageTitle (props) {
-
-    return(
-        <h2 className="page-title">{props.pageName}</h2>
-    )
+export default function PageTitle(props) {
+  return <h2 className="page-title">{props.pageName}</h2>;
 }
