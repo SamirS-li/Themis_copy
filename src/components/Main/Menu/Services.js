@@ -16,7 +16,9 @@ export default function Services() {
             <PageTitle pageName="Services" />
             <div className="services-main">
                 <div className="services-section">
-                    <img className="services-image" src={img_1} />
+
+                    <img alt="bb" className="services-image" src={img_1} />
+
                     <div className="services-info">
                         <h3 className="servces-info-title">business law</h3>
                         <p className="services-info-content">
@@ -29,7 +31,9 @@ export default function Services() {
                     </div>
                 </div>
                 <div className="services-section">
-                    <img className="services-image" src={img2_2} />
+
+                    <img alt="bb" className="services-image" src={img2_2} />
+
                     <div className="services-info">
                         <h3 className="servces-info-title">Criminal Law</h3>
                         <p className="services-info-content">
@@ -42,7 +46,9 @@ export default function Services() {
                     </div>
                 </div>
                 <div className="services-section">
-                    <img className="services-image" src={img3_3} />
+
+                    <img alt="bb" className="services-image" src={img3_3} />
+
                     <div className="services-info">
                         <h3 className="servces-info-title">Civil Law</h3>
                         <p className="services-info-content">

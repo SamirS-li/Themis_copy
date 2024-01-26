@@ -1,4 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+
+import React, { useContext, useEffect } from "react";
+
 import Slider from "react-slick";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -17,7 +19,9 @@ import { animationContext } from "../Main/Main";
 
 export default function MenuContent() {
   const { value, setValue } = useContext(animationContext);
-  const [animationValue, setAnimation] = useState(value);
+
+  // const [animationValue, setAnimation] = useState(value);
+
 
   const settings = {
     dots: false,
@@ -28,7 +32,9 @@ export default function MenuContent() {
     vertical: true,
   };
   const removeAnimation = () => {
-    setAnimation(false);
+
+    // setAnimation(false);
+
 
     document
       .querySelector(".menu-content-main")
@@ -42,6 +48,9 @@ export default function MenuContent() {
       setValue(false);
     }
   });
+
+  
+
 
   return (
     <div id="MenuContent">
@@ -61,7 +70,7 @@ export default function MenuContent() {
           </div>
           <div className="menu-content-list">
             <NavLink
-              to="/"
+              to="/mainMenu"
               className="content-close-button"
               onClick={removeAnimation}
             ></NavLink>

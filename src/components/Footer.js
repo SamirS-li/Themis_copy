@@ -1,133 +1,145 @@
-import React, { useEffect, useRef, useState } from "react";
+// import React, { useEffect, useRef, useState } from "react";
 import Testimonials from "./Testimonial";
 
 export default function Footer() {
-  const [minSize, setMinSize] = useState();
-  const [maxSize, setMaxSize] = useState(0);
-  const [intervalCount, setIntervalTime] = useState("40");
-  const [worked, setWorked] = useState(false);
 
-  useEffect(() => {
-    let carousel = document.querySelector(".App").querySelector(".carousel");
-    let nextArrow = document
-      .querySelector(".App")
-      .querySelector(".carousel-next");
-    carousel.parentElement.style.overflow = "hidden";
+  // const [minSize, setMinSize] = useState();
+  // const [maxSize, setMaxSize] = useState(0);
 
-    // Call VerticalEndSize
+  // const intervalCount = 40;
 
-    if (carousel.lastChild.className != "clone") {
-      setTimeout(() => {
-        VerticalEndSize();
-      }, 100);
-    }
+  // const [worked, setWorked] = useState(false);
 
-    // find Top size for vertical
+  // useEffect(() => {
+  //   let carousel = document.querySelector(".App").querySelector(".carousel");
+  //   let nextArrow = document
+  //     .querySelector(".App")
+  //     .querySelector(".carousel-next");
+  //   carousel.parentElement.style.overflow = "hidden";
 
-    function VerticalEndSize() {
-      let Height = 0;
-      let fullHeight = 0;
-      let topSize = 0;
-      let carousel = document.querySelector(".App").querySelector(".carousel");
-      Height = carousel.lastChild.offsetHeight;
-      Height += " " + window.getComputedStyle(carousel.lastChild).marginBottom;
-      Height += " " + window.getComputedStyle(carousel.lastChild).marginTop;
-      Height += " " + window.getComputedStyle(carousel.lastChild).paddingBottom;
-      Height += " " + window.getComputedStyle(carousel.lastChild).paddingTop;
-      Height +=
-        " " +
-        window.getComputedStyle(carousel.lastChild).borderBottom.split(" ")[0];
-      Height +=
-        " " +
-        window.getComputedStyle(carousel.lastChild).borderTop.split(" ")[0];
-      Height.replaceAll("px", "")
-        .split(" ")
-        .forEach((item) => {
-          fullHeight += +item;
-        });
-      // End size
-      topSize = fullHeight * carousel.childElementCount;
+  //   // Call VerticalEndSize
 
-      setMinSize(-topSize);
-      setMaxSize(-fullHeight);
-      return topSize;
-    }
 
-    // Add copy child into carousel
+  //   if (carousel.lastChild.className !== "clone") {
 
-    if (carousel.lastChild.className != "clone") {
-      setTimeout(() => {
-        carousel.childNodes.forEach((item) => {
-          let element = item.cloneNode(true);
-          element.className += "clone";
-          carousel.appendChild(element);
-        });
-      }, 200);
-    }
+  //     setTimeout(() => {
+  //       VerticalEndSize();
+  //     }, 100);
+  //   }
 
-    //  Carousel auto playing function
+  //   // find Top size for vertical
 
-    function carouselAutoplay() {
-      if (worked != true) {
-        setInterval(() => {
-          nextArrow.click();
-        }, 4000);
+  //   function VerticalEndSize() {
+  //     let Height = 0;
+  //     let fullHeight = 0;
+  //     let topSize = 0;
+  //     let carousel = document.querySelector(".App").querySelector(".carousel");
+  //     Height = carousel.lastChild.offsetHeight;
+  //     Height += " " + window.getComputedStyle(carousel.lastChild).marginBottom;
+  //     Height += " " + window.getComputedStyle(carousel.lastChild).marginTop;
+  //     Height += " " + window.getComputedStyle(carousel.lastChild).paddingBottom;
+  //     Height += " " + window.getComputedStyle(carousel.lastChild).paddingTop;
+  //     Height +=
+  //       " " +
+  //       window.getComputedStyle(carousel.lastChild).borderBottom.split(" ")[0];
+  //     Height +=
+  //       " " +
+  //       window.getComputedStyle(carousel.lastChild).borderTop.split(" ")[0];
+  //     Height.replaceAll("px", "")
+  //       .split(" ")
+  //       .forEach((item) => {
+  //         fullHeight += +item;
+  //       });
+  //     // End size
+  //     topSize = fullHeight * carousel.childElementCount;
 
-        setWorked(true);
-      }
-    }
+  //     setMinSize(-topSize);
+  //     setMaxSize(-fullHeight);
+  //     return topSize;
+  //   }
 
-    carouselAutoplay();
-  }, []);
-  //  -------------------------------
+  //   // Add copy child into carousel
 
-  const CarouselStyle = useRef();
-  let setwillSize = "";
 
-  const increase = function () {
-    let i = 0;
+  //   if (carousel.lastChild.className !== "clone") {
 
-    const increaseInterval = setInterval(() => {
-      i += 10;
-      setwillSize =
-        Number(CarouselStyle.current.style.top.replace("px", "")) + 10 + "px";
+  //     setTimeout(() => {
+  //       carousel.childNodes.forEach((item) => {
+  //         let element = item.cloneNode(true);
+  //         element.className += "clone";
+  //         carousel.appendChild(element);
+  //       });
+  //     }, 200);
+  //   }
 
-      if (Number(CarouselStyle.current.style.top.replace("px", "")) > maxSize) {
-        CarouselStyle.current.style.top = minSize + "px";
-      } else {
-      }
+  //   //  Carousel auto playing function
 
-      i > 100
-        ? clearInterval(increaseInterval)
-        : (CarouselStyle.current.style.top = setwillSize);
-    }, intervalCount);
-  };
+  //   function carouselAutoplay() {
 
-  function decrease() {
-    let i = 0;
-    const decreaseInterval = setInterval(() => {
-      i += 10;
-      setwillSize =
-        Number(CarouselStyle.current.style.top.replace("px", "")) - 10 + "px";
-      if (Number(CarouselStyle.current.style.top.replace("px", "")) < minSize) {
-        CarouselStyle.current.style.top = maxSize + "px";
-      } else {
-      }
-      i > 100
-        ? clearInterval(decreaseInterval)
-        : (CarouselStyle.current.style.top = setwillSize);
-    }, intervalCount);
-  }
+  //     if (worked !== true) {
+
+  //       setInterval(() => {
+  //         nextArrow.click();
+  //       }, 4000);
+
+  //       setWorked(true);
+  //     }
+  //   }
+
+  //   carouselAutoplay();
+  // }, []);
+  // //  -------------------------------
+
+  // const CarouselStyle = useRef();
+  // let setwillSize = "";
+
+  // const increase = function () {
+  //   let i = 0;
+
+  //   const increaseInterval = setInterval(() => {
+  //     i += 10;
+  //     setwillSize =
+  //       Number(CarouselStyle.current.style.top.replace("px", "")) + 10 + "px";
+
+  //     if (Number(CarouselStyle.current.style.top.replace("px", "")) > maxSize) {
+  //       CarouselStyle.current.style.top = minSize + "px";
+  //     } else {
+  //     }
+
+  //     i > 100
+  //       ? clearInterval(increaseInterval)
+  //       : (CarouselStyle.current.style.top = setwillSize);
+  //   }, intervalCount);
+  // };
+
+  // function decrease() {
+  //   let i = 0;
+  //   const decreaseInterval = setInterval(() => {
+  //     i += 10;
+  //     setwillSize =
+  //       Number(CarouselStyle.current.style.top.replace("px", "")) - 10 + "px";
+  //     if (Number(CarouselStyle.current.style.top.replace("px", "")) < minSize) {
+  //       CarouselStyle.current.style.top = maxSize + "px";
+  //     } else {
+  //     }
+  //     i > 100
+  //       ? clearInterval(decreaseInterval)
+  //       : (CarouselStyle.current.style.top = setwillSize);
+  //   }, intervalCount);
+  // }
+
 
   return (
     <div id="footer">
       <div className="footer-container">
         {/* < <  footer news  > > */}
-        <div className="footer-news">
+        {/* <div className="footer-news">
           <div className="footer-title">Latest news</div>
           <div className="footer-news-main">
-            <a className="carousel-prev" onClick={increase}></a>
-            <a className="carousel-next" onClick={decrease}></a>
+
+            <i className="carousel-prev" onClick={increase}></i>
+            <i className="carousel-next" onClick={decrease}></i>
+
             <ul
               className="news-list carousel"
               style={{ top: minSize }}
@@ -186,7 +198,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
         {/* < <  footer testimonials  > > */}
         <Testimonials />
         {/* < <  footer legal  > > */}
@@ -195,34 +207,35 @@ export default function Footer() {
           <div className="legal-main">
             <ul className="legal-list">
               <li>
-                <a href="#">Business Law</a>
+
+                <a href="aa">Business Law</a>
               </li>
               <li>
-                <a href="#">Consumer</a>
+                <a href="aa">Consumer</a>
               </li>
               <li>
-                <a href="#">Criminal Law</a>
+                <a href="aa">Criminal Law</a>
               </li>
               <li>
-                <a href="#">Child Custody</a>
+                <a href="aa">Child Custody</a>
               </li>
               <li>
-                <a href="#">Civil Rights</a>
+                <a href="aa">Civil Rights</a>
               </li>
               <li>
-                <a href="#">Bankrupcty</a>
+                <a href="aa">Bankrupcty</a>
               </li>
               <li>
-                <a href="#">Education</a>
+                <a href="aa">Education</a>
               </li>
               <li>
-                <a href="#">Car Accidents</a>
+                <a href="aa">Car Accidents</a>
               </li>
               <li>
-                <a href="#">Divorce</a>
+                <a href="aa">Divorce</a>
               </li>
               <li>
-                <a href="#">Discrimination</a>
+                <a href="aa">Discrimination</a>
               </li>
             </ul>
           </div>
