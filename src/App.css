@@ -1220,7 +1220,6 @@
       font-size: 20px;
       line-height: 1;
       font-weight: 400;
-      margin-bottom: 35px;
       text-align: left;
       padding-left:24px;
       background-repeat: no-repeat !important;
@@ -1281,7 +1280,9 @@
   }
   /* === React Slick carousel */
   
-  
+  .footer-container{
+    height: 256px;
+  }
   
   .footer-container .carousel-next{
       background: url(./image/icon_navbar_down.png);
@@ -1291,11 +1292,17 @@
   /* ------------- */
   .footer-news,.footer-testimonials{
       position: relative;
+      overflow: hidden;
   }
   .footer-news .footer-title{
       background-image: url(./image/icon_chat.png);
   }
-  .footer-news-main,.footer-testimonials-main{
+  .footer-news-main{
+    height: 200px;
+    padding-top:46px ;
+  }
+  
+  .footer-testimonials-main{
       height: 200px;
       overflow: hidden;
   }
@@ -1304,7 +1311,7 @@
   }
   
   .news-list li, .testimonials-list li{
-      display: flex;
+      display: flex!important;
       margin-bottom: 34px;
   }
   .news-list-date{
@@ -1330,6 +1337,10 @@
       color: var(--secondary);
       margin-top: 10px;
   }
+
+  .news-list .slick-next,.news-list .slick-prev{
+    top: 44!important;
+  }
   
   /* -------------- */
   .footer-testimonials .footer-title{
@@ -1353,6 +1364,7 @@
   /* -------------- */
   .footer-legal .footer-title{
       background: url(./image/legal-icon.png);
+      margin-bottom: 35px;
   }
   .legal-list li{
       padding: 5px 0 5px 21px;
@@ -1390,7 +1402,7 @@
       font-size: 12px;
       font-family: 'Voces', cursive;
       line-height: 19.5px;
-      padding: 15px 40px 15px;
+      padding: 15px 0;
       border-top: 1px solid #3a322f;
       outline: 1px solid #241F1D;
   }
