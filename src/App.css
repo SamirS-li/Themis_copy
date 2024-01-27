@@ -172,6 +172,9 @@
       border-bottom: 5px solid var(--secondaryDark);
       overflow: hidden;
       position: relative;
+      transition: all 0s linear!important;
+      /* transition-duration: 0;
+      transition-delay: 0; */
   }
   .menu-small-list li{
     display: inline-block;
